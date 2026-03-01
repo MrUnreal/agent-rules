@@ -209,6 +209,36 @@ This rule governs how all other rules are created, improved, and validated.
 - **Resume after unblocking.** Once you've solved the hard part manually, hand back to the agent for the remaining mechanical work.
 - **Account for training cut-off dates.** Agents don't know about libraries or APIs released after their training data. Provide docs for anything recent.
 
+## 18. Guard Long-Term Quality
+
+**Rationale:** The most dangerous AI missteps are invisible at commit time but compound over weeks and months. Agents frequently produce code that works now but degrades long-term maintainability through verbosity, duplication, and unnecessary complexity. — *Birgitta Böckeler, Thoughtworks*
+
+- **Watch for verbose and redundant tests.** Agents create new test functions instead of adding assertions to existing ones. More tests ≠ better tests. Duplicated test logic becomes a maintenance burden.
+- **Check for lack of reuse.** Agents often don't realize a component or utility already exists elsewhere. Before accepting new code, search for existing implementations.
+- **Trim overly complex code.** Agents sometimes generate far more than needed — elaborate abstractions, unnecessary parameters, inline styles instead of shared classes. Remove the excess.
+- **Beware brute-force fixes.** If the agent solves a memory error by increasing limits, or a timeout by extending the deadline, question whether the root cause was addressed.
+- **Review with three impact radiuses in mind:** (1) Does this work now? (2) Will this cause friction for the team this iteration? (3) Will this be maintainable in 6 months?
+
+## 19. Build Context Incrementally
+
+**Rationale:** Front-loading massive rules files and conventions before encountering real problems leads to bloated context, contradictory instructions, and instructions the agent ignores. The most effective context is built iteratively from actual failures. — *Birgitta Böckeler, Thoughtworks*
+
+- **Start with minimal rules.** Don't copy-paste someone else's 200-line rules file. Begin with 3-5 rules based on your most common issues.
+- **Add rules when you notice repeated failures.** If the agent keeps making the same mistake, write a rule to prevent it. This ensures every rule earns its place.
+- **Distinguish instructions from guidance.** Instructions tell the agent what to do ("write E2E tests this way"). Guidance sets conventions ("always use independent tests"). Both are useful; don't conflate them.
+- **Prune rules that no longer help.** As models improve, some rules become unnecessary. Periodically review and remove dead weight.
+- **Context has a cost.** Every line in your rules file competes for attention. A 50-line file the agent actually follows beats a 500-line file it ignores.
+
+## 20. Treat Agent Failures as System Signals
+
+**Rationale:** When an agent struggles repeatedly, the problem is rarely "the agent is dumb." More often, the environment is missing something: a tool, a guardrail, documentation, or a clearer constraint. Fixing the system is more durable than fixing the prompt. — *OpenAI Harness Engineering; Birgitta Böckeler*
+
+- **Ask "what's missing?" not "why is it broken?"** When the agent fails, identify the gap: missing docs? Unclear test output? No linter? Ambiguous architecture?
+- **Feed fixes back into the repository.** Don't just fix the prompt — update the AGENTS.md, add a linter rule, improve test output, or write missing documentation.
+- **Keep a "go-wrong" log.** Track cases where the agent produced bad output. Review weekly for patterns. Systemic fixes prevent entire categories of failure.
+- **Constrain architecturally, not just textually.** Linters, pre-commit hooks, and structural tests catch violations deterministically. Don't rely on the agent reading a rule — enforce it with tooling.
+- **Iterate on the harness, not just the code.** The rules file, test suite, linter config, and documentation are all part of the system. Improving them improves every future agent session.
+
 ---
 
 ## Quick Reference
@@ -233,3 +263,6 @@ This rule governs how all other rules are created, improved, and validated.
 | 15 | Iterate, Don't One-Shot | Expect multi-turn refinement; bad first results are starting points |
 | 16 | Precise Specifications | Dictate signatures, provide examples, constrain the solution space |
 | 17 | Know When to Take Over | Recognize when the agent is stuck; read docs yourself; split the work |
+| 18 | Guard Long-Term Quality | Watch for verbose tests, lack of reuse, and brute-force fixes |
+| 19 | Build Context Incrementally | Start minimal; add rules from real failures, not theory |
+| 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
