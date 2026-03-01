@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+172%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+182%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 172+ authoritative sources.<br>
+    29 battle-tested rules distilled from 182+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (172)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (182)</strong> — click to expand</summary>
 
 <br>
 
@@ -305,6 +305,16 @@ Rules are distilled from these authoritative sources:
 170. [OpenAI — "Introducing Codex"](https://openai.com/index/introducing-codex/) — Cloud-based software engineering agent powered by codex-1 (o3 optimized for SWE via RL on real-world coding tasks). AGENTS.md spec detailed: scope = directory tree, nested precedence, programmatic checks MUST run. Secure isolated containers with internet disabled during execution. Citations system for verifiable evidence. May 2025. Reinforces Rules 14 (Agent Environments), 23 (Write for Autonomous Agents), 25 (Craft ACI)
 171. [Google — "Build with Jules"](https://blog.google/technology/google-labs/jules/) — Asynchronous coding agent running on cloud VMs with Gemini 2.5 Pro. Parallel execution, visible workflow with plan/reasoning before changes, user steerability (modify plan before/during/after execution), audio changelogs for accessibility. May 2025. Reinforces Rules 9 (Delegate), 14 (Agent Environments), 27 (Weave Into Workflow)
 172. [Beck — "The Pinhole View of AI Value"](https://tidyfirst.substack.com/p/the-pinhole-view-of-ai-value) — Labor replacement is just 1 of 5 value levers: lower costs, later costs, higher revenue, earlier revenue, optionality. "Focusing only on headcount reduction is like saying the only value of a car is that you don't have to pay for a horse." Feb 2026. Reinforces Rules 26 (Sustain Your Pace), 27 (Weave Into Workflow)
+173. [Cognition — "SWE-grep: RL for Multi-Turn, Fast Context Retrieval"](https://cognition.ai/blog/swe-grep) — Parallel tool calls, fast context subagent via RL, flow window for latency optimization, Semi-Async Valley of Death (parallel tools losing sequential reasoning). Oct 2025. Reinforces Rules 9 (Delegate), 5 (Manage Context), 25 (Craft ACI)
+174. [Cognition — "SWE-1.5: Our Fast Agent Model"](https://cognition.ai/blog/swe-1-5) — Agent-model interface co-optimization, RL in coding environments, co-training model + harness for 2–5x speedup. "Agent UX is a function of model × harness." Oct 2025. Reinforces Rules 14 (Agent Environments), 25 (Craft ACI)
+175. [Cognition — "SWE-1.6 Preview and Research Update"](https://cognition.ai/blog/swe-1-6-preview) — Model UX axis, overthinking from RL (agent circles without progress), scaling training environments, intent inference for ambiguous tasks. Mar 2026. Reinforces Rules 10 (Avoid Anti-Patterns), 15 (Iterate), 25 (Craft ACI)
+176. [Anthropic — "Building Effective Agents"](https://www.anthropic.com/engineering/building-effective-agents) — Canonical taxonomy of agentic patterns: prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer. Agent-Computer Interface (ACI) design principles. "The most successful implementations use simple, composable patterns." Dec 2024. Reinforces Rules 24 (Multi-Agent Systems), 25 (Craft ACI), 8 (Structured Workflows)
+177. [Anthropic — "How We Built Our Multi-Agent Research System"](https://www.anthropic.com/engineering/built-multi-agent-research-system) — Orchestrator-worker with subagent context quarantine, parallel tool calls with 90.2% quality improvement over single-agent. Lead agent decomposes, subagents research in isolation, lead synthesizes. Jun 2025. Reinforces Rules 9 (Delegate), 24 (Multi-Agent Systems), 5 (Manage Context)
+178. [Anthropic — "The 'Think' Tool"](https://www.anthropic.com/engineering/claude-think-tool) — Structured thinking scratchpad during tool use, 54% improvement on τ-bench (multi-step tool-use tasks). Extended thinking for reasoning, think tool for in-context reflection between actions. Mar 2025. Reinforces Rules 2 (Plan First), 25 (Craft ACI)
+179. [Microsoft Research — "Magentic-One"](https://www.microsoft.com/en-us/research/blog/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks/) — Multi-agent generalist with task ledger (plan) and progress ledger (track). Orchestrator directs WebSurfer, Coder, FileSurfer, Terminal agents. Modular: swap any agent without retraining the system. Nov 2024. Reinforces Rules 24 (Multi-Agent Systems), 2 (Plan First), 14 (Agent Environments)
+180. [Breunig — "How Long Contexts Fail"](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html) — Four failure modes for agent contexts: poisoning (bad data in context), distraction (irrelevant context dilutes attention), confusion (contradictory context), clash (context fights system prompt). Jun 2025. Reinforces Rules 5 (Manage Context), 21 (Security-Conscious Use)
+181. [Breunig — "How to Fix Your Context"](https://www.dbreunig.com/2025/06/26/how-to-fix-your-context.html) — Six mitigation tactics: RAG (retrieve don't dump), tool loadout (defer tools), context quarantine (isolate subagent state), pruning (remove stale context), summarization (compress history), offloading (externalize state). Jun 2025. Reinforces Rules 5 (Manage Context), 9 (Delegate), 19 (Build Context Incrementally)
+182. [Cognition/Windsurf — "Arena Mode Leaderboard"](https://windsurf.com/blog/windsurf-arena-mode-leaderboard) — In-product model evaluation via real user behavior. Speed vs quality tradeoff visible at scale. Users prefer models that complete tasks faster even with slightly lower quality — latency dominates perceived experience. Feb 2026. Reinforces Rules 14 (Agent Environments), 25 (Craft ACI), 26 (Sustain Your Pace)
 
 </details>
 
