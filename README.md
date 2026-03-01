@@ -132,6 +132,9 @@ Rules are distilled from these authoritative sources (in order of integration):
 42. [Thomas Ptacek — My AI Skeptic Friends Are All Nuts](https://fly.io/blog/youre-all-nuts/) — Async agent workflows (13 PRs to review), "using agents well is both a skill and an engineering project of prompts, indices, and tooling", language choice matters for agent legibility, guardrails handle hallucination
 43. [David Crawshaw — How I Program with LLMs](https://sketch.dev/blog/programming-with-llms) — Chat-based LLMs do best with exam-style questions, smaller packages improve LLM context, specialized implementations over generalized wrappers, "IDE for LLMs" concept
 44. [Philip Zeyliger (Sketch) — The Unreasonable Effectiveness of an LLM Agent Loop](https://sketch.dev/blog/agent-loop) — Agent = 9-line for loop with tool use, bash as universal tool, custom throw-away agent scripts in bin/ directories
+45. [Harper Reed — My LLM Codegen Workflow](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/) — Spec → Plan → Execute pipeline, save spec.md/prompt_plan.md/todo.md as state files, break plans into small iterative chunks, "aggressively keep track of what's going on"
+46. [Thomas Ptacek — Did Semgrep Just Get A Lot More Interesting?](https://fly.io/blog/semgrep-but-for-real-now/) — Closed-loop agents generating Semgrep rules from encountered bugs, agents writing persistent rules for themselves, Cursor rules as "don't do X" constraints
+47. [Claude Code Documentation — Best Practices](https://code.claude.com/docs/en/best-practices) — Verification as highest-leverage action, explore→plan→code workflow, CLAUDE.md pruning ("Would removing this cause mistakes?"), subagents for context isolation, Writer/Reviewer pattern, fan-out for batch migrations, common failure patterns (kitchen sink sessions, overcorrection, over-specified CLAUDE.md)
 
 ## License
 
