@@ -42,7 +42,7 @@ Grab `AGENTS.md` and drop it into any repo. Every major agent reads it natively.
 git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 ```
 
-## Rules (21 total)
+## Rules (22 total)
 
 | # | Rule | One-Liner |
 |---|------|-----------|
@@ -67,6 +67,7 @@ git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 | 18 | Guard Long-Term Quality | Watch for verbose tests, lack of reuse, and brute-force fixes |
 | 19 | Build Context Incrementally | Start minimal; add rules from real failures, not theory |
 | 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
+| 21 | Security-Conscious Use | Vet MCP servers, apply least privilege, guard against approval fatigue |
 
 ## Contributing
 
@@ -93,6 +94,8 @@ PRs welcome. Focus on general skills, not technology-specific recipes.
 - [Birgitta Böckeler / Martin Fowler — The Role of Developer Skills in Agentic Coding](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
 - [Birgitta Böckeler / Martin Fowler — Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html)
 - [Aider — Tips and Conventions](https://aider.chat/docs/usage/tips.html)
+- [Mitchell Hashimoto — My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
+- [Gumbley & Ryan — Coding Assistants Threaten the Software Supply Chain](https://martinfowler.com/articles/exploring-gen-ai/software-supply-chain-attack-surface.html)
 - [agents.md Standard](https://github.com/anthropics/agents.md)
 - [GitHub Copilot Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot)
 - [Cursor Rules Documentation](https://docs.cursor.com/context/rules)
