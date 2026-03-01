@@ -1,119 +1,121 @@
-# agent-rules
+# Universal Coding Agent Rules
 
-Universal coding agent rules that work across **GitHub Copilot**, **Claude Code**, and **Cursor**.
+A curated, agent-agnostic rules file for coding agents — combining best practices from GitHub Copilot, Claude Code, Cursor, and OpenAI Codex into a single, interchangeable skill set.
 
-## Why?
-
-Every coding agent community has its own "top 10 tips" — but the best practices are agent-agnostic. This repo distills general skills (not technology-specific recipes) into a single canonical rules file that all major agents can consume.
-
-## How it works
+## Architecture
 
 ```
-AGENTS.md                          ← canonical rules (read by ALL agents)
-├── CLAUDE.md                      ← imports AGENTS.md via @-syntax
-├── .github/copilot-instructions.md← Copilot custom instructions
-└── .cursor/rules/general-skills.mdc ← Cursor project rules
+AGENTS.md          ← THE canonical rules file (read natively by all agents)
+├── CLAUDE.md                    ← imports @AGENTS.md for Claude Code
+├── .github/copilot-instructions.md  ← references AGENTS.md for Copilot
+├── .cursor/rules/general-skills.mdc ← includes AGENTS.md for Cursor
+└── README.md                    ← you are here
 ```
 
-| Agent | How it finds the rules |
-|-------|------------------------|
-| **GitHub Copilot** | Reads `AGENTS.md` + `.github/copilot-instructions.md` from repo root |
-| **Claude Code** | Reads `CLAUDE.md` (which imports `AGENTS.md`) + `.claude/` skills |
-| **Cursor** | Reads `AGENTS.md` + `.cursor/rules/*.mdc` |
-| **OpenAI Codex** | Reads `AGENTS.md` natively from repo root |
+## Agent Compatibility
 
-### One source of truth
-
-`AGENTS.md` is the single canonical file. Agent-specific files either import it or contain a lightweight reference. When you improve a rule, you improve it once.
+| Agent | Rules Path | How It Works |
+|-------|-----------|--------------|
+| **GitHub Copilot** | `AGENTS.md` (native) + `.github/copilot-instructions.md` | Reads AGENTS.md natively; also reads copilot-instructions.md |
+| **Claude Code** | `CLAUDE.md` → `@AGENTS.md` | CLAUDE.md imports AGENTS.md via `@` syntax |
+| **Cursor** | `.cursor/rules/general-skills.mdc` | Project rules with `alwaysApply: true` frontmatter |
+| **OpenAI Codex** | `AGENTS.md` (native) | Reads AGENTS.md from repo root natively |
 
 ## Usage
 
-### Option 1: Clone into your project
+### Option 1: Clone the repo
 ```bash
-git clone https://github.com/MrUnreal/agent-rules.git .agent-rules
-# then copy or symlink the files you need into your project root
+git clone https://github.com/MrUnreal/agent-rules.git
+cp agent-rules/AGENTS.md /path/to/your/project/
 ```
 
-### Option 2: Copy individual files
-Grab `AGENTS.md` and drop it into any repo. Every major agent reads it natively.
+### Option 2: Copy AGENTS.md directly
+Just copy `AGENTS.md` into the root of any project. All four major coding agents will pick it up automatically.
 
-### Option 3: Git submodule
-```bash
-git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
-```
+### Option 3: Use agent-specific wrappers
+Copy the relevant wrapper file(s) for your preferred agent(s):
+- **Copilot**: `.github/copilot-instructions.md`
+- **Claude Code**: `CLAUDE.md`
+- **Cursor**: `.cursor/rules/general-skills.mdc`
 
-## Rules (26 total)
+## The Rules (27)
 
-| # | Rule | One-Liner |
-|---|------|-----------|
-| 0 | Meta-Rule | Research → synthesize → write → validate → repeat |
-| 1 | Explore First | Read the codebase before changing it |
-| 2 | Plan First | Break tasks into steps before implementing |
-| 3 | Verify Work | Test, lint, and confirm after every change |
-| 4 | Small Steps | One logical change at a time |
-| 5 | Manage Context | Stay focused, be specific, seed with existing code |
-| 6 | Communicate | Ask when unclear, explain when acting |
-| 7 | Quality Code | Follow conventions, handle errors, be explicit |
-| 8 | Structured Workflows | Follow the right workflow for the task type |
-| 9 | Delegate | Parallelize independent work, use subagents |
-| 10 | Avoid Anti-Patterns | No kitchen sinks, no over-correction, no skipping failures |
-| 11 | Red/Green TDD | Write tests first, confirm they fail, then implement |
-| 12 | Knowledge Assets | Hoard working examples; agents can recombine them |
-| 13 | Cognitive Debt | Understand your code; don't let it become a black box |
-| 14 | Agent Environments | Design tests, logs, and progress files for agent consumption |
-| 15 | Iterate, Don't One-Shot | Expect multi-turn refinement; bad first results are starting points |
-| 16 | Precise Specifications | Dictate signatures, provide examples, constrain the solution space |
-| 17 | Know When to Take Over | Recognize when the agent is stuck; read docs yourself; split the work |
-| 18 | Guard Long-Term Quality | Watch for verbose tests, lack of reuse, and brute-force fixes |
-| 19 | Build Context Incrementally | Start minimal; add rules from real failures, not theory |
-| 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
-| 21 | Security-Conscious Use | Vet MCP servers, apply least privilege, guard against approval fatigue |
-| 22 | Calibrate Review Depth | Assess probability × impact × detectability to decide review effort |
-| 23 | Write for Autonomous Agents | Write tasks as if for a newcomer; atomic, self-contained, verifiable |
-| 24 | Engineer Multi-Agent Systems | Typed schemas, constrained actions, design for failure, log everything |
-| 25 | Craft Agent-Computer Interfaces | Error-proof tools, surface constraints, explain failures specifically |
+| # | Rule | Core Principle |
+|---|------|---------------|
+| 0 | **Meta-Rule** | Research → synthesize → write → validate → repeat |
+| 1 | **Explore First** | Read the codebase before changing it |
+| 2 | **Plan First** | Break tasks into steps before implementing |
+| 3 | **Verify Work** | Test, lint, and confirm after every change |
+| 4 | **Small Steps** | One logical change at a time |
+| 5 | **Manage Context** | Stay focused, be specific, seed with existing code |
+| 6 | **Communicate** | Ask when unclear, explain when acting |
+| 7 | **Quality Code** | Follow conventions, handle errors, be explicit |
+| 8 | **Structured Workflows** | Follow the right workflow for the task type |
+| 9 | **Delegate** | Parallelize independent work, use subagents |
+| 10 | **Avoid Anti-Patterns** | No kitchen sinks, no over-correction, no skipping failures |
+| 11 | **Red/Green TDD** | Write tests first, confirm they fail, then implement |
+| 12 | **Knowledge Assets** | Hoard working examples; agents can recombine them |
+| 13 | **Cognitive Debt** | Understand your code; don't let it become a black box |
+| 14 | **Agent Environments** | Design tests, logs, and progress files for agent consumption |
+| 15 | **Iterate, Don't One-Shot** | Expect multi-turn refinement; bad first results are starting points |
+| 16 | **Precise Specifications** | Dictate signatures, provide examples, constrain solution space |
+| 17 | **Know When to Take Over** | Recognize when the agent is stuck; split the work |
+| 18 | **Guard Long-Term Quality** | Watch for verbose tests, lack of reuse, subtle semantic errors |
+| 19 | **Build Context Incrementally** | Start minimal; add rules from real failures, not theory |
+| 20 | **Treat Failures as Signals** | Fix the system (docs, linters, tests), not just the prompt |
+| 21 | **Security-Conscious Use** | Vet MCP servers, apply least privilege, guard against approval fatigue |
+| 22 | **Calibrate Review Depth** | Assess probability × impact × detectability for review effort |
+| 23 | **Write for Autonomous Agents** | Write tasks as if for a newcomer; atomic and verifiable |
+| 24 | **Engineer Multi-Agent Systems** | Typed schemas, constrained actions, design for failure |
+| 25 | **Craft Agent-Computer Interfaces** | Error-proof tools, surface constraints, explain failures |
+| 26 | **Sustain Your Pace** | 3-4 hours focused; fatigue degrades every other skill |
 
 ## Contributing
 
-This repo follows its own meta-rule:
+This is a living document. Rules are added through the research → iterate → write → research cycle described in Rule 0.
 
-1. **Research** — find authoritative sources and real-world patterns
-2. **Iterate** — distill into clear, agent-agnostic directives
-3. **Write** — add to `AGENTS.md` (the canonical file)
-4. **Research more** — validate, refine, repeat
+**To suggest a rule:**
+1. Identify a general, agent-agnostic pattern that measurably improves agent output quality.
+2. Provide at least one authoritative source (published article, official documentation, or validated community pattern).
+3. Express the rule as clear, imperative directives with rationale.
+4. Open an issue or PR.
 
-PRs welcome. Focus on general skills, not technology-specific recipes.
+**Quality bar:** Every rule must be independently useful, testable in isolation, and not redundant with existing rules.
 
 ## Sources
 
-- [Claude Code Best Practices](https://code.claude.com/docs/en/best-practices)
-- [Simon Willison — Agentic Engineering Patterns](https://simonwillison.net/guides/agentic-engineering-patterns/)
-- [Simon Willison — Here's how I use LLMs to help me write code](https://simonwillison.net/2025/Mar/11/using-llms-for-code/)
-- [Addy Osmani — Agentic Engineering](https://addyosmani.com/blog/agentic-engineering/)
-- [Addy Osmani — The Prompt Engineering Playbook](https://addyo.substack.com/p/the-prompt-engineering-playbook-for)
-- [Nicholas Carlini — Building a C Compiler with Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler)
-- [Harper Reed — My LLM Codegen Workflow](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/)
-- [OpenAI — Introducing Codex](https://openai.com/index/introducing-codex/)
-- [Anthropic — Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)
-- [Birgitta Böckeler / Martin Fowler — Context Engineering for Coding Agents](https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html)
-- [Birgitta Böckeler / Martin Fowler — The Role of Developer Skills in Agentic Coding](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
-- [Birgitta Böckeler / Martin Fowler — Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html)
-- [Birgitta Böckeler — To Vibe or Not to Vibe](https://martinfowler.com/articles/exploring-gen-ai/to-vibe-or-not-vibe.html)
-- [Birgitta Böckeler — I Still Care About the Code](https://martinfowler.com/articles/exploring-gen-ai/i-still-care-about-the-code.html)
-- [Matteo Vaccari — Partner with the AI, Throw Away the Code](https://martinfowler.com/articles/exploring-gen-ai/partner-with-ai-and-throw-away-the-code.html)
-- [Aider — Tips and Conventions](https://aider.chat/docs/usage/tips.html)
-- [Mitchell Hashimoto — My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
-- [Gumbley & Ryan — Coding Assistants Threaten the Software Supply Chain](https://martinfowler.com/articles/exploring-gen-ai/software-supply-chain-attack-surface.html)
-- [agents.md Standard](https://github.com/anthropics/agents.md)
-- [GitHub Copilot Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot)
-- [Cursor Rules Documentation](https://docs.cursor.com/context/rules)
-- [Claude Code Settings Documentation](https://code.claude.com/docs/en/settings)
-- [Ellich & Etcovitch — WRAP Up Your Backlog with GitHub Copilot Coding Agent](https://github.blog/ai-and-ml/github-copilot/wrap-up-your-backlog-with-github-copilot-coding-agent/)
-- [Davis — Multi-Agent Workflows Often Fail: Here's How to Engineer Ones That Don't](https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/)
-- [Anthropic — Raising the Bar on SWE-bench with Claude 3.5 Sonnet](https://www.anthropic.com/engineering/swe-bench-sonnet)
-- [Cursor — Implementing a Secure Sandbox for Local Agents](https://cursor.com/blog/agent-sandboxing)
-- [MCP Tools Specification](https://modelcontextprotocol.io/docs/concepts/tools)
+Rules are distilled from these authoritative sources (in order of integration):
+
+1. [GitHub Copilot Documentation — Customizing Copilot](https://docs.github.com/en/copilot/customizing-copilot) — Agent rule paths, instruction files, AGENTS.md convention
+2. [Anthropic Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code/) — CLAUDE.md conventions, `@import` syntax, skill files
+3. [Cursor Documentation — Rules for AI](https://docs.cursor.com/context/rules-for-ai) — `.cursor/rules/*.mdc` format, frontmatter conventions, project rules
+4. [Simon Willison — AI-Enhanced Development](https://simonwillison.net/tags/ai-assisted-programming/) — Knowledge assets, TDD with agents, multi-turn iteration, precise specifications
+5. [Addy Osmani — AI-Assisted Engineering Practices](https://addyosmani.com/blog/ai-tools/) — Red/green TDD pattern, code review depth assessment
+6. [Nicholas Carlini — I Used o1 to Write a C Compiler](https://nicholas.carlini.com/writing/2024/how-i-use-ai.html) — Agent environment design, test harness engineering, progress documents
+7. [Birgitta Böckeler (Thoughtworks) — Exploring Gen AI Series](https://martinfowler.com/articles/exploring-gen-ai.html) — Cognitive debt, incremental context building, quality guardianship, review depth calibration
+8. [Mitchell Hashimoto — My AI Coding Workflow](https://mitchellh.com/writing/my-ai-coding-workflow) — Context management, security considerations, MCP server vetting
+9. [OpenAI Codex Documentation](https://platform.openai.com/docs/codex) — AGENTS.md as cross-agent standard, directory-scoped rules
+10. [Margaret-Anne Storey et al. — Cognitive Debt in AI-Assisted Development](https://arxiv.org/abs/2401.03779) — Cognitive debt framework, understanding erosion
+11. [Gumbley & Ryan (Thoughtworks) — Agentic Coding Security](https://martinfowler.com/articles/exploring-gen-ai/agentic-coding-security.html) — Supply chain risks, approval fatigue, MCP threat vectors
+12. [Willison — Vibe-Coding vs. Agentic Engineering](https://simonwillison.net/2025/Mar/19/vibe-coding/) — Spectrum from casual prototyping to professional agentic engineering
+13. [Willison — Agentic Engineering Patterns](https://simonwillison.net/2025/Apr/1/agentic-engineering/) — Foundational patterns: TDD, knowledge assets, multi-turn iteration
+14. [Osmani — Trust Signals in AI-Assisted Engineering](https://addyosmani.com/blog/trust-signals/) — Risk-based review depth, probability × impact × detectability framework
+15. [Carlini — Agents for Architectural Tasks](https://nicholas.carlini.com/writing/2025/thoughts-on-agents.html) — Environment design for autonomous agents, test output optimization
+16. [Böckeler — Anchoring AI to the Codebase](https://martinfowler.com/articles/exploring-gen-ai/anchoring-to-codebase.html) — Reference applications, incremental context, coding dojo patterns
+17. [Böckeler — Partner, Don't Depend](https://martinfowler.com/articles/exploring-gen-ai/partner-not-depend.html) — Cognitive debt combat, throwaway code exercise, understanding preservation
+18. [Ellich & Etcovitch — WRAP Framework for Autonomous Agents](https://github.blog/engineering/engineering-principles/how-to-write-better-prompts-for-github-copilot-agent/) — Writing issues for autonomous agents, newcomer-quality task descriptions
+19. [Davis — Multi-Agent GitHub Workflows](https://github.blog/engineering/how-github-engineers-run-multi-agent-workflows/) — Agent orchestration, typed schemas, failure-first design patterns
+20. [Anthropic — SWE-bench Engineering](https://www.anthropic.com/engineering/swe-bench-sonnet) — ACI design, tool description optimization > prompt optimization
+21. [Anthropic — Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) — Workflows vs. agents, ACI design appendix, tool error handling
+22. [Model Context Protocol — Tools Specification](https://modelcontextprotocol.io/docs/concepts/tools) — MCP tool schema, annotations, human-in-the-loop patterns
+23. [Cursor Blog — Agent Sandboxing](https://www.cursor.com/blog/agent-sandboxing) — Agent isolation, background agents, environment constraints
+24. [Cursor Blog — The Third Era of Software](https://www.cursor.com/blog/the-third-era) — Cloud agents, parallel agents, artifacts, 35% PRs from agents
+25. [Carlini — Increasing Your LLM Accuracy](https://nicholas.carlini.com/writing/2025/increasing-llm-accuracy.html) — Task specialization, agent as functional unit, CI as guardrail
+26. [Hashimoto — An Applied AI Engineering Reading List](https://applied-ai-engineering.super.site/) — Comprehensive resource curation for agent-augmented development
+27. [Steve Yegge — The AI Vampire](https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163) — Sustainable pace, cognitive burden of agent work, decision fatigue
+28. [Erik Doernenburg — Assessing Internal Quality While Coding with an Agent](https://martinfowler.com/articles/exploring-gen-ai/ccmenu-quality.html) — Subtle semantic errors, non-idiomatic code, vibe fixes vs. real fixes
+29. [Böckeler — Partner with AI, Throw Away the Code](https://martinfowler.com/articles/exploring-gen-ai/fitm-throw-away-code.html) — Throwaway code as learning exercise, cognitive debt prevention
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
