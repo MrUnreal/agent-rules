@@ -42,7 +42,7 @@ Grab `AGENTS.md` and drop it into any repo. Every major agent reads it natively.
 git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 ```
 
-## Rules (22 total)
+## Rules (23 total)
 
 | # | Rule | One-Liner |
 |---|------|-----------|
@@ -68,6 +68,7 @@ git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 | 19 | Build Context Incrementally | Start minimal; add rules from real failures, not theory |
 | 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
 | 21 | Security-Conscious Use | Vet MCP servers, apply least privilege, guard against approval fatigue |
+| 22 | Calibrate Review Depth | Assess probability × impact × detectability to decide review effort |
 
 ## Contributing
 
@@ -90,9 +91,13 @@ PRs welcome. Focus on general skills, not technology-specific recipes.
 - [Nicholas Carlini — Building a C Compiler with Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler)
 - [Harper Reed — My LLM Codegen Workflow](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/)
 - [OpenAI — Introducing Codex](https://openai.com/index/introducing-codex/)
+- [Anthropic — Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)
 - [Birgitta Böckeler / Martin Fowler — Context Engineering for Coding Agents](https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html)
 - [Birgitta Böckeler / Martin Fowler — The Role of Developer Skills in Agentic Coding](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
 - [Birgitta Böckeler / Martin Fowler — Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html)
+- [Birgitta Böckeler — To Vibe or Not to Vibe](https://martinfowler.com/articles/exploring-gen-ai/to-vibe-or-not-vibe.html)
+- [Birgitta Böckeler — I Still Care About the Code](https://martinfowler.com/articles/exploring-gen-ai/i-still-care-about-the-code.html)
+- [Matteo Vaccari — Partner with the AI, Throw Away the Code](https://martinfowler.com/articles/exploring-gen-ai/partner-with-ai-and-throw-away-the-code.html)
 - [Aider — Tips and Conventions](https://aider.chat/docs/usage/tips.html)
 - [Mitchell Hashimoto — My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
 - [Gumbley & Ryan — Coding Assistants Threaten the Software Supply Chain](https://martinfowler.com/articles/exploring-gen-ai/software-supply-chain-attack-surface.html)
