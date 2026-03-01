@@ -42,7 +42,7 @@ Grab `AGENTS.md` and drop it into any repo. Every major agent reads it natively.
 git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 ```
 
-## Rules (23 total)
+## Rules (25 total)
 
 | # | Rule | One-Liner |
 |---|------|-----------|
@@ -69,6 +69,8 @@ git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 | 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
 | 21 | Security-Conscious Use | Vet MCP servers, apply least privilege, guard against approval fatigue |
 | 22 | Calibrate Review Depth | Assess probability × impact × detectability to decide review effort |
+| 23 | Write for Autonomous Agents | Write tasks as if for a newcomer; atomic, self-contained, verifiable |
+| 24 | Engineer Multi-Agent Systems | Typed schemas, constrained actions, design for failure, log everything |
 
 ## Contributing
 
@@ -105,6 +107,8 @@ PRs welcome. Focus on general skills, not technology-specific recipes.
 - [GitHub Copilot Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot)
 - [Cursor Rules Documentation](https://docs.cursor.com/context/rules)
 - [Claude Code Settings Documentation](https://code.claude.com/docs/en/settings)
+- [Ellich & Etcovitch — WRAP Up Your Backlog with GitHub Copilot Coding Agent](https://github.blog/ai-and-ml/github-copilot/wrap-up-your-backlog-with-github-copilot-coding-agent/)
+- [Davis — Multi-Agent Workflows Often Fail: Here's How to Engineer Ones That Don't](https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/)
 
 ## License
 
