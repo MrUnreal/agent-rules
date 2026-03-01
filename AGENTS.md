@@ -316,6 +316,16 @@ This rule governs how all other rules are created, improved, and validated.
 - **Reproduce your own work with agents.** When entering a new domain, do the work manually first, then recreate it with an agent. This builds the judgment needed to evaluate agent output in that area.
 - **Engineer the harness continuously.** Every time an agent makes a mistake, don't just fix the output — add a guardrail (rule, linter, test, tool) so the mistake can't recur. Your harness is the compound interest of agent work.
 
+## 28. Make Your Codebase Agent-Legible
+
+**Rationale:** Agents navigate codebases by listing directories, reading filenames, and pulling files into context. A codebase optimized for agent legibility — semantic naming, small files, strong types, and in-repo knowledge — makes every agent session more effective. If information isn't in the repo, it doesn't exist to the agent. — *OpenAI Harness Engineering; Steve Krenzel, Logic Inc*
+
+- **Treat your file structure as an interface.** `./billing/invoices/compute.ts` communicates more than `./utils/helpers.ts`. Directory and file names should convey domain and purpose at a glance.
+- **Prefer many small, well-scoped files.** Agents truncate or summarize large files, losing context. A file short enough to load in full stays fully active in the agent's working set.
+- **Use semantic type and variable names.** `UserId`, `WorkspaceSlug`, `SignedWebhookPayload` are self-documenting. Strong types shrink the search space of valid agent actions.
+- **Make the repository the system of record.** Design docs, architectural decisions, and conventions must live in the repo as versioned markdown. Knowledge in Slack, Google Docs, or people's heads is invisible to agents.
+- **Use AGENTS.md as a map, not a manual.** A short entry point linking to deeper docs beats a monolithic instructions file that overloads context and rots quickly.
+
 ---
 
 ## Quick Reference
@@ -350,3 +360,4 @@ This rule governs how all other rules are created, improved, and validated.
 | 25 | Craft Agent-Computer Interfaces | Error-proof tools, surface constraints, explain failures specifically |
 | 26 | Sustain Your Pace | 3-4 hours focused; fatigue degrades every other skill |
 | 27 | Weave Into Workflow | End-of-day agents, background slam dunks, control interruptions |
+| 28 | Agent-Legible Codebase | Semantic names, small files, strong types, repo as system of record |
