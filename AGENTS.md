@@ -250,6 +250,17 @@ This rule governs how all other rules are created, improved, and validated.
 - **Include agent workflows in threat modeling.** Agents introduce new vectors: context poisoning (malicious data in fetched content), privilege escalation (agent runs commands you wouldn't), dependency confusion (agent adds unvetted packages).
 - **Sandbox when possible.** Run agent tasks in containers, VMs, or restricted environments — especially for untrusted codebases or when testing agent-suggested commands.
 
+## 22. Calibrate Review Depth to Risk
+
+**Rationale:** Not all AI-generated code needs the same level of scrutiny. Treating every change with either blind trust or line-by-line paranoia wastes effort. A structured risk assessment lets you invest review effort where it matters most. — *Birgitta Böckeler, Thoughtworks; Anthropic*
+
+- **Assess three dimensions before reviewing.** (1) Probability: how likely is the AI to get this wrong? (2) Impact: if it's wrong and undetected, what happens? (3) Detectability: will tests, types, or your familiarity catch mistakes?
+- **Low probability + low impact + high detectability = light review.** Prototypes, internal tools, well-tested changes with typed languages — scan for obvious issues and move on.
+- **High probability + high impact + low detectability = deep review.** Production code, unfamiliar domains, security-sensitive paths, missing test coverage — review as carefully as if you wrote it yourself.
+- **Factor in context quality.** Is the codebase modular and well-named? Is the agent seeing the right files? Poor context increases probability of errors.
+- **"Imagine you're on call."** Would you deploy this change tonight and sleep soundly? If not, increase your review depth.
+- **Build intuition over time.** These assessments become second nature. The goal isn't a checklist — it's developing judgment for when to trust and when to verify.
+
 ---
 
 ## Quick Reference
@@ -278,3 +289,4 @@ This rule governs how all other rules are created, improved, and validated.
 | 19 | Build Context Incrementally | Start minimal; add rules from real failures, not theory |
 | 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
 | 21 | Security-Conscious Use | Vet MCP servers, apply least privilege, guard against approval fatigue |
+| 22 | Calibrate Review Depth | Assess probability × impact × detectability to decide review effort |
