@@ -284,6 +284,17 @@ This rule governs how all other rules are created, improved, and validated.
 - **Expect retries and partial failures.** Agents are non-deterministic. The same input may produce different outputs. Design for idempotency where possible.
 - **Treat agents like distributed systems, not chat flows.** Apply the same engineering discipline: contract testing, observability, graceful degradation, and explicit failure handling.
 
+## 25. Craft Agent-Computer Interfaces with Care
+
+**Rationale:** Anthropic spent more time optimizing tool interfaces than overall prompts for their SWE-bench agent. The agent-computer interface (ACI) deserves the same design attention as human-computer interfaces. Poorly designed tools cause silent failures; well-designed ones make agents dramatically more capable. — *Anthropic, SWE-bench Engineering; Cursor, Agent Sandboxing*
+
+- **Invest in tool descriptions like API docs.** Include usage examples, edge cases, input format requirements, and clear boundaries from similar tools. A good tool description reads like a docstring for a junior developer.
+- **Error-proof tools (poka-yoke).** Require absolute paths instead of relative ones. Enforce unique matches for edits. Make it structurally hard for the agent to misuse the tool.
+- **Surface constraints explicitly.** When an agent operates in a sandbox or restricted environment, describe those constraints in the tool description — not just in a rules file. Agents that know their boundaries before hitting them recover faster.
+- **When tools fail, explain why specifically.** "Permission denied: sandbox blocks network access. Request escalation to proceed." is recoverable. "Error" is not. Specific failure messages reduce retry loops by 40%.
+- **Keep formats natural.** Use formats close to what models saw in training (markdown, plain text). Avoid formats requiring counting (diff chunk headers) or heavy escaping (code inside JSON strings).
+- **Test how agents actually use your tools.** Run many example inputs, observe failure modes, and iterate on descriptions. Tool design is empirical, not theoretical.
+
 ---
 
 ## Quick Reference
@@ -315,3 +326,4 @@ This rule governs how all other rules are created, improved, and validated.
 | 22 | Calibrate Review Depth | Assess probability × impact × detectability to decide review effort |
 | 23 | Write for Autonomous Agents | Write tasks as if for a newcomer; atomic, self-contained, verifiable |
 | 24 | Engineer Multi-Agent Systems | Typed schemas, constrained actions, design for failure, log everything |
+| 25 | Craft Agent-Computer Interfaces | Error-proof tools, surface constraints, explain failures specifically |
