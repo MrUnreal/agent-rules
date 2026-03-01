@@ -41,18 +41,25 @@ Grab `AGENTS.md` and drop it into any repo. Every major agent reads it natively.
 git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 ```
 
-## Rules overview
+## Rules (15 total)
 
-The rules are organized into these categories:
-
-1. **Meta-Rule** — how to research, iterate, and write rules (the rule that governs all other rules)
-2. **Exploration & Planning** — understand before you act
-3. **Verification & Testing** — always prove your work
-4. **Context Management** — be precise, stay focused
-5. **Iterative Development** — small steps, tight loops
-6. **Communication** — ask, explain, report
-7. **Code Quality** — conventions, clarity, consistency
-8. **Anti-Patterns** — what NOT to do
+| # | Rule | One-Liner |
+|---|------|-----------|
+| 0 | Meta-Rule | Research → synthesize → write → validate → repeat |
+| 1 | Explore First | Read the codebase before changing it |
+| 2 | Plan First | Break tasks into steps before implementing |
+| 3 | Verify Work | Test, lint, and confirm after every change |
+| 4 | Small Steps | One logical change at a time |
+| 5 | Manage Context | Stay focused, be specific, scope searches |
+| 6 | Communicate | Ask when unclear, explain when acting |
+| 7 | Quality Code | Follow conventions, handle errors, be explicit |
+| 8 | Structured Workflows | Follow the right workflow for the task type |
+| 9 | Delegate | Parallelize independent work, use subagents |
+| 10 | Avoid Anti-Patterns | No kitchen sinks, no over-correction, no skipping failures |
+| 11 | Red/Green TDD | Write tests first, confirm they fail, then implement |
+| 12 | Knowledge Assets | Hoard working examples; agents can recombine them |
+| 13 | Cognitive Debt | Understand your code; don't let it become a black box |
+| 14 | Agent Environments | Design tests, logs, and progress files for agent consumption |
 
 ## Contributing
 
@@ -68,7 +75,10 @@ PRs welcome. Focus on general skills, not technology-specific recipes.
 ## Sources
 
 - [Claude Code Best Practices](https://code.claude.com/docs/en/best-practices)
+- [Simon Willison — Agentic Engineering Patterns](https://simonwillison.net/guides/agentic-engineering-patterns/)
+- [Addy Osmani — Agentic Engineering](https://addyosmani.com/blog/agentic-engineering/)
 - [Addy Osmani — The Prompt Engineering Playbook](https://addyo.substack.com/p/the-prompt-engineering-playbook-for)
+- [Nicholas Carlini — Building a C Compiler with Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler)
 - [Harper Reed — My LLM Codegen Workflow](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/)
 - [agents.md Standard](https://github.com/anthropics/agents.md)
 - [GitHub Copilot Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot)
