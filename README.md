@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+182%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+190%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 182+ authoritative sources.<br>
+    29 battle-tested rules distilled from 190+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (182)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (190)</strong> — click to expand</summary>
 
 <br>
 
@@ -315,6 +315,14 @@ Rules are distilled from these authoritative sources:
 180. [Breunig — "How Long Contexts Fail"](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html) — Four failure modes for agent contexts: poisoning (bad data in context), distraction (irrelevant context dilutes attention), confusion (contradictory context), clash (context fights system prompt). Jun 2025. Reinforces Rules 5 (Manage Context), 21 (Security-Conscious Use)
 181. [Breunig — "How to Fix Your Context"](https://www.dbreunig.com/2025/06/26/how-to-fix-your-context.html) — Six mitigation tactics: RAG (retrieve don't dump), tool loadout (defer tools), context quarantine (isolate subagent state), pruning (remove stale context), summarization (compress history), offloading (externalize state). Jun 2025. Reinforces Rules 5 (Manage Context), 9 (Delegate), 19 (Build Context Incrementally)
 182. [Cognition/Windsurf — "Arena Mode Leaderboard"](https://windsurf.com/blog/windsurf-arena-mode-leaderboard) — In-product model evaluation via real user behavior. Speed vs quality tradeoff visible at scale. Users prefer models that complete tasks faster even with slightly lower quality — latency dominates perceived experience. Feb 2026. Reinforces Rules 14 (Agent Environments), 25 (Craft ACI), 26 (Sustain Your Pace)
+183. [JetBrains/Koog — "Building AI Agents in Kotlin – Part 4: Delegation and Sub-Agents"](https://blog.jetbrains.com/ai/2026/01/building-ai-agents-in-kotlin-part-4-delegation-and-sub-agents/) — Agent-as-a-tool sub-agent pattern with context quarantine via task handoffs ("natural compression"). 10% cost reduction using cheaper sub-model (GPT-4.1 Mini). Conway's law applied to agent role distribution. Jan 2026. Reinforces Rules 9 (Delegate), 24 (Multi-Agent Systems), 5 (Manage Context)
+184. [JetBrains/Koog — "Building AI Agents in Kotlin – Part 5: Teaching Agents to Forget"](https://blog.jetbrains.com/ai/2026/01/building-ai-agents-in-kotlin-part-5-teaching-agents-to-forget/) — History compression strategies: WholeHistory (LLM summarize) vs RetrieveFactsFromHistory (concept extraction with 8 concepts: project-structure, important-achievements, agent-goal, etc.). Compression thresholds (200 messages / 200K chars). Jan 2026. Reinforces Rules 5 (Manage Context), 14 (Agent Environments), 19 (Build Context Incrementally)
+185. [Kiro Documentation — "Specs"](https://kiro.dev/docs/specs/) — Three-phase structured workflow for agentic IDE: requirements→design→tasks. Feature specs and bugfix specs. "Use Specs when building complex features; use Vibe for quick exploratory coding." AGENTS.md natively supported. Reinforces Rules 2 (Plan First), 8 (Structured Workflows), 23 (Write for Autonomous Agents)
+186. [Kiro Documentation — "Steering"](https://kiro.dev/docs/steering/) — Persistent context files with 4 inclusion modes: always (default), fileMatch (conditional on glob), manual (#reference in chat), auto (description-matched). Foundational files: product.md, tech.md, structure.md. AGENTS.md natively supported. Reinforces Rules 5 (Manage Context), 19 (Build Context Incrementally), 28 (Agent-Legible Codebase)
+187. [Kiro Documentation — "Hooks"](https://kiro.dev/docs/hooks/) — Agent hooks as automated triggers for IDE events: file save, tool invocation, spec task execution. Event-driven agent automation with predefined prompts or shell commands on triggers. "Unlike CLAUDE.md instructions which are advisory, hooks are deterministic." Reinforces Rules 14 (Agent Environments), 20 (Treat Failures as Signals)
+188. [Yegge/Sourcegraph — "The Death of the Junior Developer"](https://sourcegraph.com/blog/the-death-of-the-junior-developer) — Chat-Oriented Programming (CHOP): senior devs are safer with AI because they (1) know what they want before AI writes it, (2) can detect bad guidance. "Programming has leveled up into a problem of slinging context." GPT-4o as inflection point. Jun 2024. Reinforces Rules 17 (Know When to Take Over), 22 (Calibrate Review Depth), 26 (Sustain Your Pace)
+189. [Anthropic — "Best Practices for Claude Code"](https://code.claude.com/docs/en/best-practices) — Comprehensive practitioner guide: verify work (“single highest-leverage thing you can do”), explore→plan→code workflow, CLAUDE.md as persistent context, subagents for investigation, /clear between tasks, fan-out across files, kitchen-sink anti-pattern, trust-then-verify gap. Reinforces Rules 1–5 (Explore/Plan/Verify/Small Steps/Context), 10 (Anti-Patterns), 13 (Cognitive Debt), 25 (Craft ACI)
+190. [Anthropic — "Raising the Bar on SWE-bench Verified with Claude 3.5 Sonnet"](https://www.anthropic.com/engineering/swe-bench-sonnet) — Minimal scaffold design: give control to the model, keep scaffolding minimal (bash + edit tools only). Error-proofing tools: absolute paths required, unique match for edits. "Much more attention should go into designing tool interfaces for models, in the same way that attention goes into designing tool interfaces for humans." 49% SWE-bench Verified. Jan 2025. Reinforces Rules 25 (Craft ACI), 14 (Agent Environments)
 
 </details>
 
