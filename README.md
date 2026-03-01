@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+162%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+172%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 162+ authoritative sources.<br>
+    29 battle-tested rules distilled from 172+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (162)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (172)</strong> — click to expand</summary>
 
 <br>
 
@@ -295,6 +295,16 @@ Rules are distilled from these authoritative sources:
 160. [Willison — "Interactive Explanations" Pattern](https://simonwillison.net/guides/agentic-engineering-patterns/interactive-explanations/) — When code becomes a black box, have agents build interactive demos and animations that make logic intuitive. Combat cognitive debt through explorable explanations. Feb 2026. Reinforces Rules 13 (Cognitive Debt), 15 (Iterate)
 161. [Willison — "Hoard Things You Know How to Do" Pattern](https://simonwillison.net/guides/agentic-engineering-patterns/hoard-things-you-know-how-to-do/) — Working code examples as crucial enablers — maintain a library of proof-of-concepts. "Fire off a prompt" to test feasibility because code is cheap. Knowledge of what's possible is the real asset. Feb 2026. Reinforces Rules 12 (Knowledge Assets), 15 (Iterate)
 162. [Willison — "Linear Walkthroughs" Pattern](https://simonwillison.net/guides/agentic-engineering-patterns/linear-walkthroughs/) — Get structured code walkthroughs from coding agents to understand existing, forgotten, or vibe-coded codebases. Frontier models with the right harness can construct detailed walkthroughs. Feb 2026. Reinforces Rule 13 (Cognitive Debt)
+163. [Willison — "Writing Code is Cheap Now"](https://simonwillison.net/guides/agentic-engineering-patterns/code-is-cheap/) — Coding agents drop the cost of typing code but "good code" remains expensive (tested, documented, handles errors, protected by tests). Second-guess "don't build that" intuitions; "fire off a prompt anyway" because code-writing cost approaches zero. Feb 2026. Reinforces Rules 12 (Knowledge Assets), 15 (Iterate)
+164. [Willison — "First Run the Tests"](https://simonwillison.net/guides/agentic-engineering-patterns/first-run-the-tests/) — Four-word superprompt with three purposes: tells the agent a test suite exists, indicates project complexity via test count, and puts the agent in a testing mindset biased toward future testing. "Automated tests are no longer optional when working with coding agents." Feb 2026. Reinforces Rules 3 (Verify Work), 11 (Red/Green TDD)
+165. [Beck — "Taming the Genie: Like Kent Beck"](https://tidyfirst.substack.com/p/taming-the-genie-like-kent-beck) — Rope data structure experiment: personas drive micro-behavior (naming, test style) but NOT architecture; explicit design constraints (Composite pattern) fixed macro-architecture; combined persona+constraints wins best. The Bitter Lesson Applied: leverage computation, don't encode expertise. Jan 2026. Reinforces Rules 16 (Precise Specifications), 22 (Calibrate Review Depth)
+166. [Beck — "The Precious Eyeblink"](https://tidyfirst.substack.com/p/the-precious-eyeblink) — 400ms Doherty Threshold: tools should optimize for feedback latency not completeness. JUnit Max ran tests on every save ordered new→recently failed→everything else. "Every tool designer faces this choice: optimize for capabilities of the tool or constraints of the human?" Dec 2025. Reinforces Rules 14 (Agent Environments), 25 (Craft ACI), 26 (Sustain Your Pace)
+167. [Beck — "Party of One for Code Review!"](https://tidyfirst.substack.com/p/party-of-one-for-code-review) — Code review economics break with AI-speed development. Two purposes remain: sanity check (does change match intent?) and structural drift (is codebase still manipulable?). "I'm not just maintaining the code for future human me — I'm maintaining it for future augmented me." Dec 2025. Reinforces Rules 13 (Cognitive Debt), 18 (Guard Long-Term Quality), 22 (Calibrate Review Depth)
+168. [Beck — "90% of My Skills Are Now Worth $0"](https://tidyfirst.substack.com/p/90-of-my-skills-are-now-worth-0) — 90% of skills commoditized but 10% worth 1000x. Technological revolutions: (1) radically reduce cost of expensive thing, (2) discover what's valuable about newly cheap thing. Growth rates matter more than absolute values. Apr 2023. Reinforces Rules 17 (Know When to Take Over), 26 (Sustain Your Pace)
+169. [Beck — "The Bet On Juniors Just Got Better"](https://tidyfirst.substack.com/p/the-bet-on-juniors-just-got-better) — AI compresses junior developer "valley of regret" from 24→9 months, cutting failure rate by >50%. Manage juniors for learning not production. "Not vibe coding — augmented coding." Freed time invested in institutional knowledge and mentoring. Dec 2025. Reinforces Rules 13 (Cognitive Debt), 15 (Iterate)
+170. [OpenAI — "Introducing Codex"](https://openai.com/index/introducing-codex/) — Cloud-based software engineering agent powered by codex-1 (o3 optimized for SWE via RL on real-world coding tasks). AGENTS.md spec detailed: scope = directory tree, nested precedence, programmatic checks MUST run. Secure isolated containers with internet disabled during execution. Citations system for verifiable evidence. May 2025. Reinforces Rules 14 (Agent Environments), 23 (Write for Autonomous Agents), 25 (Craft ACI)
+171. [Google — "Build with Jules"](https://blog.google/technology/google-labs/jules/) — Asynchronous coding agent running on cloud VMs with Gemini 2.5 Pro. Parallel execution, visible workflow with plan/reasoning before changes, user steerability (modify plan before/during/after execution), audio changelogs for accessibility. May 2025. Reinforces Rules 9 (Delegate), 14 (Agent Environments), 27 (Weave Into Workflow)
+172. [Beck — "The Pinhole View of AI Value"](https://tidyfirst.substack.com/p/the-pinhole-view-of-ai-value) — Labor replacement is just 1 of 5 value levers: lower costs, later costs, higher revenue, earlier revenue, optionality. "Focusing only on headcount reduction is like saying the only value of a car is that you don't have to pay for a horse." Feb 2026. Reinforces Rules 26 (Sustain Your Pace), 27 (Weave Into Workflow)
 
 </details>
 
