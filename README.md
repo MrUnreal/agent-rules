@@ -125,6 +125,9 @@ Rules are distilled from these authoritative sources (in order of integration):
 35. [Nicholas Carlini — Building a C Compiler with a Team of Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler-with-parallel-claudes) — 16 parallel agents, task locking via git files, agent role specialization, oracle-based test partitioning, 2000 sessions / 100K lines
 36. [Anthropic — Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Context rot (n² attention relationships), attention budget, compaction and reinitiation, structured note-taking, sub-agent architectures for context isolation
 37. [Anthropic — Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) — Initializer + coding agent pattern, feature list as JSON, progress files, "one feature at a time", failure modes (one-shotting, premature victory, dirty state)
+38. [Anthropic — Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — Eval-driven development, capability vs. regression evals, grader types (code/model/human), pass@k and pass^k metrics for non-determinism, "grade what the agent produced not the path it took"
+39. [Anthropic — Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) — Progressive tool disclosure via filesystem, code as tool interface (98.7% token reduction), context-efficient tool results, state persistence and skills
+40. [Anthropic — How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/how-we-built-our-multi-agent-research-system) — Orchestrator-worker pattern, token budget as 80% performance predictor, teaching delegation (objective + output format + tool guidance + boundaries), agents improving their own tools (40% task time reduction), subagent output to filesystem
 
 ## License
 
