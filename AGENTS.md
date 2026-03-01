@@ -239,6 +239,17 @@ This rule governs how all other rules are created, improved, and validated.
 - **Constrain architecturally, not just textually.** Linters, pre-commit hooks, and structural tests catch violations deterministically. Don't rely on the agent reading a rule — enforce it with tooling.
 - **Iterate on the harness, not just the code.** The rules file, test suite, linter config, and documentation are all part of the system. Improving them improves every future agent session.
 
+## 21. Practice Security-Conscious Agent Use
+
+**Rationale:** Coding agents execute commands with developer-level privileges, read and write arbitrary files, and connect to external services via MCP and tool-calling. Every agent session is a new entry point in your software supply chain. — *Gumbley & Ryan, Thoughtworks; Mitchell Hashimoto*
+
+- **Treat rules files and MCP servers as supply chain components.** Vet them with the same rigor as third-party libraries. A malicious or compromised MCP server can poison agent context and trigger unintended actions.
+- **Apply least privilege.** Restrict file system access, network permissions, and tool availability to what the task actually requires. Don't give agents blanket access to production credentials or infrastructure.
+- **Guard against approval fatigue.** Rapid code generation encourages rubber-stamping diffs. If you stop reading diffs, you stop catching bugs, vulnerabilities, and unwanted dependency additions. Slow down for security-critical paths.
+- **Monitor agent-initiated changes.** Track file system modifications, dependency additions, network calls, and configuration changes made during agent sessions. Unexpected changes are a signal, not noise.
+- **Include agent workflows in threat modeling.** Agents introduce new vectors: context poisoning (malicious data in fetched content), privilege escalation (agent runs commands you wouldn't), dependency confusion (agent adds unvetted packages).
+- **Sandbox when possible.** Run agent tasks in containers, VMs, or restricted environments — especially for untrusted codebases or when testing agent-suggested commands.
+
 ---
 
 ## Quick Reference
@@ -266,3 +277,4 @@ This rule governs how all other rules are created, improved, and validated.
 | 18 | Guard Long-Term Quality | Watch for verbose tests, lack of reuse, and brute-force fixes |
 | 19 | Build Context Incrementally | Start minimal; add rules from real failures, not theory |
 | 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
+| 21 | Security-Conscious Use | Vet MCP servers, apply least privilege, guard against approval fatigue |
