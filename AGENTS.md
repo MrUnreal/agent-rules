@@ -211,12 +211,13 @@ This rule governs how all other rules are created, improved, and validated.
 
 ## 18. Guard Long-Term Quality
 
-**Rationale:** The most dangerous AI missteps are invisible at commit time but compound over weeks and months. Agents frequently produce code that works now but degrades long-term maintainability through verbosity, duplication, and unnecessary complexity. — *Birgitta Böckeler, Thoughtworks*
+**Rationale:** The most dangerous AI missteps are invisible at commit time but compound over weeks and months. Agents frequently produce code that works now but degrades long-term maintainability through verbosity, duplication, and unnecessary complexity. — *Birgitta Böckeler, Thoughtworks; Erik Doernenburg*
 
 - **Watch for verbose and redundant tests.** Agents create new test functions instead of adding assertions to existing ones. More tests ≠ better tests. Duplicated test logic becomes a maintenance burden.
 - **Check for lack of reuse.** Agents often don't realize a component or utility already exists elsewhere. Before accepting new code, search for existing implementations.
 - **Trim overly complex code.** Agents sometimes generate far more than needed — elaborate abstractions, unnecessary parameters, inline styles instead of shared classes. Remove the excess.
 - **Beware brute-force fixes.** If the agent solves a memory error by increasing limits, or a timeout by extending the deadline, question whether the root cause was addressed.
+- **Catch subtle semantic errors.** Code may compile and pass tests but use non-idiomatic patterns that degrade maintainability (e.g. replacing optional types with empty-string defaults). These are invisible to tests but visible to experienced developers.
 - **Review with three impact radiuses in mind:** (1) Does this work now? (2) Will this cause friction for the team this iteration? (3) Will this be maintainable in 6 months?
 
 ## 19. Build Context Incrementally
@@ -295,6 +296,16 @@ This rule governs how all other rules are created, improved, and validated.
 - **Keep formats natural.** Use formats close to what models saw in training (markdown, plain text). Avoid formats requiring counting (diff chunk headers) or heavy escaping (code inside JSON strings).
 - **Test how agents actually use your tools.** Run many example inputs, observe failure modes, and iterate on descriptions. Tool design is empirical, not theoretical.
 
+## 26. Sustain Your Pace
+
+**Rationale:** Agent work shifts the workload from implementation to decisions. You make more choices per hour — reviewing diffs, judging correctness, managing context, redirecting failed approaches. This is more cognitively demanding than writing code yourself. Fatigue degrades every other skill in this list. — *Steve Yegge; Erik Doernenburg*
+
+- **Plan for focused bursts, not marathons.** 3-4 hours of intensive agent-directed work is a realistic daily pace. Beyond that, decision quality drops measurably.
+- **Recognize fatigue signals.** If you're skimming diffs instead of reading them, accepting changes without understanding them, or feeling frustrated with errors you'd normally catch — stop.
+- **Agents don't fatigue; you do.** The asymmetry matters. The agent will generate code at midnight as well as at 9am. Your ability to evaluate that code will not.
+- **Fatigue undermines every other rule.** Tired reviewers skip Rule 22 (review depth), weaken Rule 21 (security), accumulate Rule 13 (cognitive debt), and miss Rule 17's signal to take over.
+- **Front-load critical decisions.** Schedule security reviews, architectural decisions, and unfamiliar-domain work for your sharpest hours. Save routine refactoring and boilerplate for lower-energy periods.
+
 ---
 
 ## Quick Reference
@@ -327,3 +338,4 @@ This rule governs how all other rules are created, improved, and validated.
 | 23 | Write for Autonomous Agents | Write tasks as if for a newcomer; atomic, self-contained, verifiable |
 | 24 | Engineer Multi-Agent Systems | Typed schemas, constrained actions, design for failure, log everything |
 | 25 | Craft Agent-Computer Interfaces | Error-proof tools, surface constraints, explain failures specifically |
+| 26 | Sustain Your Pace | 3-4 hours focused; fatigue degrades every other skill |
