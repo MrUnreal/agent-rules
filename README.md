@@ -42,7 +42,7 @@ Grab `AGENTS.md` and drop it into any repo. Every major agent reads it natively.
 git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 ```
 
-## Rules (18 total)
+## Rules (21 total)
 
 | # | Rule | One-Liner |
 |---|------|-----------|
@@ -64,6 +64,9 @@ git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 | 15 | Iterate, Don't One-Shot | Expect multi-turn refinement; bad first results are starting points |
 | 16 | Precise Specifications | Dictate signatures, provide examples, constrain the solution space |
 | 17 | Know When to Take Over | Recognize when the agent is stuck; read docs yourself; split the work |
+| 18 | Guard Long-Term Quality | Watch for verbose tests, lack of reuse, and brute-force fixes |
+| 19 | Build Context Incrementally | Start minimal; add rules from real failures, not theory |
+| 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
 
 ## Contributing
 
@@ -86,6 +89,10 @@ PRs welcome. Focus on general skills, not technology-specific recipes.
 - [Nicholas Carlini — Building a C Compiler with Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler)
 - [Harper Reed — My LLM Codegen Workflow](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/)
 - [OpenAI — Introducing Codex](https://openai.com/index/introducing-codex/)
+- [Birgitta Böckeler / Martin Fowler — Context Engineering for Coding Agents](https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html)
+- [Birgitta Böckeler / Martin Fowler — The Role of Developer Skills in Agentic Coding](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
+- [Birgitta Böckeler / Martin Fowler — Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html)
+- [Aider — Tips and Conventions](https://aider.chat/docs/usage/tips.html)
 - [agents.md Standard](https://github.com/anthropics/agents.md)
 - [GitHub Copilot Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot)
 - [Cursor Rules Documentation](https://docs.cursor.com/context/rules)
