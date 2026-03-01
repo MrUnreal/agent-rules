@@ -38,7 +38,7 @@ Copy the relevant wrapper file(s) for your preferred agent(s):
 - **Claude Code**: `CLAUDE.md`
 - **Cursor**: `.cursor/rules/general-skills.mdc`
 
-## The Rules (28)
+## The Rules (29)
 
 | # | Rule | Core Principle |
 |---|------|---------------|
@@ -70,6 +70,7 @@ Copy the relevant wrapper file(s) for your preferred agent(s):
 | 25 | **Craft Agent-Computer Interfaces** | Error-proof tools, surface constraints, explain failures |
 | 26 | **Sustain Your Pace** | 3-4 hours focused; fatigue degrades every other skill |
 | 27 | **Weave Into Workflow** | End-of-day agents, background slam dunks, control interruptions |
+| 28 | **Agent-Legible Codebase** | Semantic names, small files, strong types, repo as system of record |
 
 ## Contributing
 
@@ -119,6 +120,8 @@ Rules are distilled from these authoritative sources (in order of integration):
 30. [Böckeler — Context Engineering for Coding Agents](https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html) — Instructions vs. guidance taxonomy, context loading responsibility (LLM/human/deterministic), illusion of control
 31. [Böckeler — Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html) — Harness = context + architectural constraints + garbage collection agents, constraining runtime increases autonomy
 32. [Mitchell Hashimoto — My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey) — 6-step adoption: end-of-day agents, slam dunk delegation, harness engineering, always-running agents
+33. [OpenAI — Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/) — AGENTS.md as map not manual, repo as system of record, garbage collection agents, progressive disclosure, enforcing architecture via linters
+34. [Steve Krenzel (Logic Inc) — AI Is Forcing Us To Write Good Code](https://bits.logic.inc/p/ai-is-forcing-us-to-write-good-code) — 100% code coverage as agent guardrail, filesystem as interface, fast ephemeral concurrent dev environments, end-to-end types
 
 ## License
 
