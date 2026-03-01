@@ -306,6 +306,16 @@ This rule governs how all other rules are created, improved, and validated.
 - **Fatigue undermines every other rule.** Tired reviewers skip Rule 22 (review depth), weaken Rule 21 (security), accumulate Rule 13 (cognitive debt), and miss Rule 17's signal to take over.
 - **Front-load critical decisions.** Schedule security reviews, architectural decisions, and unfamiliar-domain work for your sharpest hours. Save routine refactoring and boilerplate for lower-energy periods.
 
+## 27. Weave Agents Into Your Workflow
+
+**Rationale:** Knowing how to prompt an agent matters less than knowing when and where to deploy one. The highest-leverage pattern is running agents asynchronously — end-of-day warm starts, background delegation during deep work, and continuous agent utilization across the workday. — *Mitchell Hashimoto; Birgitta Böckeler*
+
+- **Kick off end-of-day agents.** Block the last 30 minutes to start agents on research, idea exploration, or issue triage. Tomorrow starts with a warm context instead of a cold one.
+- **Outsource slam dunks to background agents.** While you do deep creative work, delegate high-confidence, well-specified tasks to agents running in parallel. Save your attention for ambiguous problems.
+- **Control interruptions.** Turn off agent notifications. Context switching is expensive. Check agent output on your schedule, not theirs.
+- **Reproduce your own work with agents.** When entering a new domain, do the work manually first, then recreate it with an agent. This builds the judgment needed to evaluate agent output in that area.
+- **Engineer the harness continuously.** Every time an agent makes a mistake, don't just fix the output — add a guardrail (rule, linter, test, tool) so the mistake can't recur. Your harness is the compound interest of agent work.
+
 ---
 
 ## Quick Reference
@@ -339,3 +349,4 @@ This rule governs how all other rules are created, improved, and validated.
 | 24 | Engineer Multi-Agent Systems | Typed schemas, constrained actions, design for failure, log everything |
 | 25 | Craft Agent-Computer Interfaces | Error-proof tools, surface constraints, explain failures specifically |
 | 26 | Sustain Your Pace | 3-4 hours focused; fatigue degrades every other skill |
+| 27 | Weave Into Workflow | End-of-day agents, background slam dunks, control interruptions |
