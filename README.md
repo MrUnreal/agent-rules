@@ -42,7 +42,7 @@ Grab `AGENTS.md` and drop it into any repo. Every major agent reads it natively.
 git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 ```
 
-## Rules (25 total)
+## Rules (26 total)
 
 | # | Rule | One-Liner |
 |---|------|-----------|
@@ -71,6 +71,7 @@ git submodule add https://github.com/MrUnreal/agent-rules.git .agent-rules
 | 22 | Calibrate Review Depth | Assess probability × impact × detectability to decide review effort |
 | 23 | Write for Autonomous Agents | Write tasks as if for a newcomer; atomic, self-contained, verifiable |
 | 24 | Engineer Multi-Agent Systems | Typed schemas, constrained actions, design for failure, log everything |
+| 25 | Craft Agent-Computer Interfaces | Error-proof tools, surface constraints, explain failures specifically |
 
 ## Contributing
 
@@ -109,6 +110,9 @@ PRs welcome. Focus on general skills, not technology-specific recipes.
 - [Claude Code Settings Documentation](https://code.claude.com/docs/en/settings)
 - [Ellich & Etcovitch — WRAP Up Your Backlog with GitHub Copilot Coding Agent](https://github.blog/ai-and-ml/github-copilot/wrap-up-your-backlog-with-github-copilot-coding-agent/)
 - [Davis — Multi-Agent Workflows Often Fail: Here's How to Engineer Ones That Don't](https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/)
+- [Anthropic — Raising the Bar on SWE-bench with Claude 3.5 Sonnet](https://www.anthropic.com/engineering/swe-bench-sonnet)
+- [Cursor — Implementing a Secure Sandbox for Local Agents](https://cursor.com/blog/agent-sandboxing)
+- [MCP Tools Specification](https://modelcontextprotocol.io/docs/concepts/tools)
 
 ## License
 
