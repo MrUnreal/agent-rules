@@ -76,12 +76,13 @@ This rule governs how all other rules are created, improved, and validated.
 
 ## 5. Manage Context Aggressively
 
-**Rationale:** Agents have finite context windows. Flooding the context with irrelevant information degrades output quality.
+**Rationale:** Context is the single most important resource an agent has. Managing it well is the foundational skill of effective agent use. — *Simon Willison*
 
 - **Stay focused on one task.** Finish the current task before starting a new one.
 - **Reference specific files and functions** rather than vague descriptions. "Fix the `handleAuth` function in `src/auth.ts`" not "Fix the auth stuff."
 - **Scope your searches.** Search in specific directories or file patterns rather than the entire codebase.
-- **Summarize research findings** before acting on them. Don't carry raw search results through the entire session.
+- **Seed context with existing code.** Paste in or reference the relevant modules, types, or patterns so the agent starts from the right foundation.
+- **Start simple, then iterate to complex.** Begin with a minimal version and add complexity incrementally — each step builds on verified context.
 - **Clear between unrelated tasks.** Don't let context from task A pollute task B.
 
 ## 6. Communicate Clearly
@@ -176,6 +177,38 @@ This rule governs how all other rules are created, improved, and validated.
 - **Make tasks independently solvable.** Structure work so multiple agents (or sessions) can make progress without stepping on each other.
 - **Design test output for agents, not humans.** Pre-compute summary statistics. Put `ERROR` on the same line as the reason. Make output parseable.
 
+## 15. Iterate, Don't One-Shot
+
+**Rationale:** Treating agent interactions as single prompts throws away the most powerful feature: conversation. A bad first result is a starting point, not a failure. The best results come from multiple rounds of refinement. — *Simon Willison*
+
+- **Expect multi-turn interactions.** A single prompt rarely produces the final answer. Plan for 2-5 refinement rounds on non-trivial tasks.
+- **Give specific feedback, not just "try again."** "The function handles the happy path but crashes on empty input" is actionable. "That's wrong" is not.
+- **Ask for options before committing.** "Give me three approaches to solve X with tradeoffs" is a powerful opening move for complex decisions.
+- **Refactor freely.** Ask the agent to restructure, rename, or rewrite code you've already accepted. It doesn't mind.
+- **Build on partial success.** If 80% of the output is good, keep that and iterate on the remaining 20%. Don't start from scratch.
+
+## 16. Provide Precise Specifications
+
+**Rationale:** The tighter the specification, the better the output. Agents work best when constraints are explicit, not implied. Dictating function signatures and expected behavior produces dramatically better code than vague descriptions. — *Simon Willison*
+
+- **Dictate function signatures.** Specify function names, parameter types, and return types. Let the agent fill in the implementation.
+- **Provide input/output examples.** "Given input `[1,2,3]`, return `6`" eliminates ambiguity that words alone cannot.
+- **Name the patterns you want.** "Use the strategy pattern" or "implement as a middleware" gives structural guidance.
+- **Constrain the solution space.** "Use only the standard library" or "no external dependencies" prevents unwanted complexity.
+- **Reference existing code as a template.** "Follow the same pattern as `handleUserCreate` in `src/handlers.ts`" anchors the agent to your codebase conventions.
+- **Be authoritarian for production code.** Save open-ended exploration for prototyping. For production, dictate exactly what you want.
+
+## 17. Know When to Take Over
+
+**Rationale:** Agents are powerful but not omniscient. Recognizing when the agent is stuck or when manual intervention is faster is a critical skill. Stubbornly continuing to prompt past the point of diminishing returns wastes more time than it saves. — *Simon Willison*
+
+- **Recognize the loop.** If the agent produces the same wrong answer after 2-3 attempts with different prompts, it likely can't solve this with its current context.
+- **Read the docs yourself.** When the agent hallucinates API details or library usage, go to the source. Paste the correct docs back into context.
+- **Take over for domain-specific logic.** Complex business rules, nuanced algorithms, or security-critical code often require human judgment.
+- **Split the work.** Write the tricky core logic yourself; let the agent handle the boilerplate, tests, and glue code around it.
+- **Resume after unblocking.** Once you've solved the hard part manually, hand back to the agent for the remaining mechanical work.
+- **Account for training cut-off dates.** Agents don't know about libraries or APIs released after their training data. Provide docs for anything recent.
+
 ---
 
 ## Quick Reference
@@ -187,7 +220,7 @@ This rule governs how all other rules are created, improved, and validated.
 | 2 | Plan First | Break tasks into steps before implementing |
 | 3 | Verify Work | Test, lint, and confirm after every change |
 | 4 | Small Steps | One logical change at a time |
-| 5 | Manage Context | Stay focused, be specific, scope searches |
+| 5 | Manage Context | Stay focused, be specific, seed with existing code |
 | 6 | Communicate | Ask when unclear, explain when acting |
 | 7 | Quality Code | Follow conventions, handle errors, be explicit |
 | 8 | Structured Workflows | Follow the right workflow for the task type |
@@ -197,3 +230,6 @@ This rule governs how all other rules are created, improved, and validated.
 | 12 | Knowledge Assets | Hoard working examples; agents can recombine them |
 | 13 | Cognitive Debt | Understand your code; don't let it become a black box |
 | 14 | Agent Environments | Design tests, logs, and progress files for agent consumption |
+| 15 | Iterate, Don't One-Shot | Expect multi-turn refinement; bad first results are starting points |
+| 16 | Precise Specifications | Dictate signatures, provide examples, constrain the solution space |
+| 17 | Know When to Take Over | Recognize when the agent is stuck; read docs yourself; split the work |
