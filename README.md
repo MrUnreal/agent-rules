@@ -38,7 +38,7 @@ Copy the relevant wrapper file(s) for your preferred agent(s):
 - **Claude Code**: `CLAUDE.md`
 - **Cursor**: `.cursor/rules/general-skills.mdc`
 
-## The Rules (27)
+## The Rules (28)
 
 | # | Rule | Core Principle |
 |---|------|---------------|
@@ -69,6 +69,7 @@ Copy the relevant wrapper file(s) for your preferred agent(s):
 | 24 | **Engineer Multi-Agent Systems** | Typed schemas, constrained actions, design for failure |
 | 25 | **Craft Agent-Computer Interfaces** | Error-proof tools, surface constraints, explain failures |
 | 26 | **Sustain Your Pace** | 3-4 hours focused; fatigue degrades every other skill |
+| 27 | **Weave Into Workflow** | End-of-day agents, background slam dunks, control interruptions |
 
 ## Contributing
 
@@ -115,6 +116,9 @@ Rules are distilled from these authoritative sources (in order of integration):
 27. [Steve Yegge — The AI Vampire](https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163) — Sustainable pace, cognitive burden of agent work, decision fatigue
 28. [Erik Doernenburg — Assessing Internal Quality While Coding with an Agent](https://martinfowler.com/articles/exploring-gen-ai/ccmenu-quality.html) — Subtle semantic errors, non-idiomatic code, vibe fixes vs. real fixes
 29. [Böckeler — Partner with AI, Throw Away the Code](https://martinfowler.com/articles/exploring-gen-ai/fitm-throw-away-code.html) — Throwaway code as learning exercise, cognitive debt prevention
+30. [Böckeler — Context Engineering for Coding Agents](https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html) — Instructions vs. guidance taxonomy, context loading responsibility (LLM/human/deterministic), illusion of control
+31. [Böckeler — Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html) — Harness = context + architectural constraints + garbage collection agents, constraining runtime increases autonomy
+32. [Mitchell Hashimoto — My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey) — 6-step adoption: end-of-day agents, slam dunk delegation, harness engineering, always-running agents
 
 ## License
 
