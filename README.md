@@ -122,6 +122,9 @@ Rules are distilled from these authoritative sources (in order of integration):
 32. [Mitchell Hashimoto — My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey) — 6-step adoption: end-of-day agents, slam dunk delegation, harness engineering, always-running agents
 33. [OpenAI — Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/) — AGENTS.md as map not manual, repo as system of record, garbage collection agents, progressive disclosure, enforcing architecture via linters
 34. [Steve Krenzel (Logic Inc) — AI Is Forcing Us To Write Good Code](https://bits.logic.inc/p/ai-is-forcing-us-to-write-good-code) — 100% code coverage as agent guardrail, filesystem as interface, fast ephemeral concurrent dev environments, end-to-end types
+35. [Nicholas Carlini — Building a C Compiler with a Team of Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler-with-parallel-claudes) — 16 parallel agents, task locking via git files, agent role specialization, oracle-based test partitioning, 2000 sessions / 100K lines
+36. [Anthropic — Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Context rot (n² attention relationships), attention budget, compaction and reinitiation, structured note-taking, sub-agent architectures for context isolation
+37. [Anthropic — Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) — Initializer + coding agent pattern, feature list as JSON, progress files, "one feature at a time", failure modes (one-shotting, premature victory, dirty state)
 
 ## License
 
