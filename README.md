@@ -1,47 +1,72 @@
-# Universal Coding Agent Rules
+<h1 align="center">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+153%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+</h1>
 
-A curated, agent-agnostic rules file for coding agents — combining best practices from GitHub Copilot, Claude Code, Cursor, and OpenAI Codex into a single, interchangeable skill set.
+<p align="center">
+    <strong>One rules file for every coding agent.</strong><br>
+    29 battle-tested rules distilled from 153+ authoritative sources.<br>
+    Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
+</p>
 
-## Architecture
+<p align="center">
+    <a href="https://github.com/MrUnreal/agent-rules/stargazers"><img src="https://img.shields.io/github/stars/MrUnreal/agent-rules?style=for-the-badge&color=58a6ff&logo=github" alt="Stars" /></a>
+    <a href="https://github.com/MrUnreal/agent-rules/network/members"><img src="https://img.shields.io/github/forks/MrUnreal/agent-rules?style=for-the-badge&color=8b5cf6&logo=gitextensions&logoColor=white" alt="Forks" /></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-f97316?style=for-the-badge" alt="License" /></a>
+</p>
 
-```
-AGENTS.md          ← THE canonical rules file (read natively by all agents)
-├── CLAUDE.md                    ← imports @AGENTS.md for Claude Code
-├── .github/copilot-instructions.md  ← references AGENTS.md for Copilot
-├── .cursor/rules/general-skills.mdc ← includes AGENTS.md for Cursor
-└── README.md                    ← you are here
-```
+<p align="center">
+    <img src="https://img.shields.io/badge/GitHub_Copilot-✅_Native-238636?style=flat-square" alt="Copilot" />
+    <img src="https://img.shields.io/badge/Claude_Code-✅_@import-d97706?style=flat-square" alt="Claude" />
+    <img src="https://img.shields.io/badge/Cursor-✅_Project_Rules-7c3aed?style=flat-square" alt="Cursor" />
+    <img src="https://img.shields.io/badge/OpenAI_Codex-✅_Native-10a37f?style=flat-square" alt="Codex" />
+</p>
 
-## Agent Compatibility
+---
 
-| Agent | Rules Path | How It Works |
-|-------|-----------|--------------|
-| **GitHub Copilot** | `AGENTS.md` (native) + `.github/copilot-instructions.md` | Reads AGENTS.md natively; also reads copilot-instructions.md |
-| **Claude Code** | `CLAUDE.md` → `@AGENTS.md` | CLAUDE.md imports AGENTS.md via `@` syntax |
-| **Cursor** | `.cursor/rules/general-skills.mdc` | Project rules with `alwaysApply: true` frontmatter |
-| **OpenAI Codex** | `AGENTS.md` (native) | Reads AGENTS.md from repo root natively |
+## ⚡ Quick Start
 
-## Usage
-
-### Option 1: Clone the repo
 ```bash
-git clone https://github.com/MrUnreal/agent-rules.git
-cp agent-rules/AGENTS.md /path/to/your/project/
+# Just grab the file
+curl -O https://raw.githubusercontent.com/MrUnreal/agent-rules/main/AGENTS.md
 ```
 
-### Option 2: Copy AGENTS.md directly
-Just copy `AGENTS.md` into the root of any project. All four major coding agents will pick it up automatically.
+Or copy [`AGENTS.md`](AGENTS.md) to your project root. Done.
 
-### Option 3: Use agent-specific wrappers
-Copy the relevant wrapper file(s) for your preferred agent(s):
-- **Copilot**: `.github/copilot-instructions.md`
-- **Claude Code**: `CLAUDE.md`
-- **Cursor**: `.cursor/rules/general-skills.mdc`
+<details>
+<summary><strong>Need agent-specific wrappers?</strong></summary>
 
-## The Rules (29)
+<br>
 
-| # | Rule | Core Principle |
-|---|------|---------------|
+| Agent | Wrapper | Mechanism |
+|-------|---------|-----------|
+| **Copilot** | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) | References AGENTS.md |
+| **Claude Code** | [`CLAUDE.md`](CLAUDE.md) | `@AGENTS.md` import |
+| **Cursor** | [`.cursor/rules/general-skills.mdc`](.cursor/rules/general-skills.mdc) | `alwaysApply: true` frontmatter |
+| **Codex** | — | Reads AGENTS.md natively |
+
+</details>
+
+---
+
+## 🏗️ Architecture
+
+```
+AGENTS.md                            ← THE canonical rules file
+├── CLAUDE.md                        ← @imports AGENTS.md
+├── .github/copilot-instructions.md  ← references AGENTS.md
+├── .cursor/rules/general-skills.mdc ← includes AGENTS.md
+├── PERSONAS.md                      ← role-based rule guide
+└── README.md                        ← you are here
+```
+
+**The insight:** 90% of agent rules are agent-agnostic. TDD works in Copilot and Claude Code equally. Context management matters everywhere. So why maintain four separate configs?
+
+---
+
+## 📋 The 29 Rules
+
+| # | Rule | One-Liner |
+|---|------|-----------|
 | 0 | **Meta-Rule** | Research → synthesize → write → validate → repeat |
 | 1 | **Explore First** | Read the codebase before changing it |
 | 2 | **Plan First** | Break tasks into steps before implementing |
@@ -72,21 +97,41 @@ Copy the relevant wrapper file(s) for your preferred agent(s):
 | 27 | **Weave Into Workflow** | End-of-day agents, background slam dunks, control interruptions |
 | 28 | **Agent-Legible Codebase** | Semantic names, small files, strong types, repo as system of record |
 
-## Contributing
+> 📖 **Full rules with rationale and directives** → [`AGENTS.md`](AGENTS.md)
 
-This is a living document. Rules are added through the research → iterate → write → research cycle described in Rule 0.
+---
 
-**To suggest a rule:**
-1. Identify a general, agent-agnostic pattern that measurably improves agent output quality.
-2. Provide at least one authoritative source (published article, official documentation, or validated community pattern).
-3. Express the rule as clear, imperative directives with rationale.
-4. Open an issue or PR.
+## 🎭 Personas
 
-**Quality bar:** Every rule must be independently useful, testable in isolation, and not redundant with existing rules.
+Not every rule matters equally for every task. [`PERSONAS.md`](PERSONAS.md) maps rules to six roles:
 
-## Sources
+| Persona | Focus | Critical Rules |
+|---------|-------|----------------|
+| 🔨 **Coder** | Implementing, refactoring | TDD, Quality Guard, Legible Code |
+| 🔍 **Researcher** | Exploring, gathering knowledge | Meta-Rule, Knowledge Assets, Iterate |
+| 👁️ **Reviewer** | Code review, auditing | Review Depth, Cognitive Debt, Quality |
+| 📐 **Planner** | Design, task decomposition | Plan First, Precise Specs, Autonomous Tasks |
+| ⚙️ **Operator** | CI/CD, infra, security | Security, Environments, Failure Signals |
+| 🐛 **Debugger** | Root cause analysis | Structured Workflows, Verify, Failures as Signals |
 
-Rules are distilled from these authoritative sources (in order of integration):
+---
+
+## 🤝 Contributing
+
+Rules evolve through the research → iterate → write → research cycle (Rule 0).
+
+**To suggest a rule:** open an issue or PR with an agent-agnostic pattern backed by at least one authoritative source. Express it as imperative directives with rationale.
+
+**Quality bar:** independently useful, testable in isolation, not redundant.
+
+---
+
+<details>
+<summary><strong>📚 Sources (153)</strong> — click to expand</summary>
+
+<br>
+
+Rules are distilled from these authoritative sources:
 
 1. [GitHub Copilot Documentation — Customizing Copilot](https://docs.github.com/en/copilot/customizing-copilot) — Agent rule paths, instruction files, AGENTS.md convention
 2. [Anthropic Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code/) — CLAUDE.md conventions, `@import` syntax, skill files
@@ -233,7 +278,24 @@ Rules are distilled from these authoritative sources (in order of integration):
 143. [Wen et al. — Learning Task Decomposition to Assist Humans in Competitive Programming](https://arxiv.org/abs/2406.04604) — ACL 2024. Automatically decomposes complex solutions into simpler pieces corresponding to specific subtasks. "Assistive value" metric measuring feasibility and speed for humans to repair decomposed solutions. Non-experts solve 33.3% more problems, 3.3x faster with decomposed solutions. 177 hours of human study. Validates human-agent collaboration through task decomposition. Reinforces Rules 2 (Plan First — task decomposition), 4 (Small Steps — decomposed solutions), 17 (Know When to Take Over — human repair of agent output)
 144. [Wei et al. — SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution](https://arxiv.org/abs/2502.18449) — NeurIPS 2025. First approach to scale RL for real-world software engineering using lightweight rule-based rewards. Llama3-SWE-RL-70B achieves 41.0% on SWE-bench Verified — best for medium-sized (<100B) LLMs. Surprisingly, RL on software evolution data emerged with generalized reasoning skills (improved on 5 out-of-domain tasks), while supervised fine-tuning led to degradation. Reinforces Rules 14 (Agent Environments — SWE-bench evaluation), 15 (Iterate Don't One-Shot — RL emergence from iteration), 20 (Treat Failures as Signals — learning from software lifecycle data)
 145. [Kwa et al. — Measuring AI Ability to Complete Long Software Tasks](https://arxiv.org/abs/2503.14499) — NeurIPS 2025. Proposes "50%-task-completion time horizon" metric quantifying AI capability in terms of human task duration. Claude 3.7 Sonnet: ~50 minute time horizon. Frontier AI time horizon doubling approximately every 7 months since 2019. Increase driven by greater reliability, ability to adapt to mistakes, and better reasoning/tool use. Predicts 5-year timeline to automating month-long software tasks. Reinforces Rules 15 (Iterate Don't One-Shot — adaptation to mistakes drives progress), 17 (Know When to Take Over — task complexity frontier), 26 (Sustain Your Pace — time horizon as planning metric)
+146. [Willison — Agentic Engineering Patterns (Full Guide)](https://simonwillison.net/guides/agentic-engineering-patterns/) — Structured guide covering code-is-cheap, hoarding working examples, red/green TDD, first-run-tests, interactive explanations, linear walkthroughs, and practical prompts. Feb 2026. Reinforces Rules 11 (Red/Green TDD), 12 (Knowledge Assets), 13 (Cognitive Debt), 15 (Iterate Don't One-Shot)
+147. [Davis (GitHub) — Multi-Agent Workflows Often Fail](https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/) — Three engineering patterns for reliable multi-agent systems: typed schemas at boundaries, action schemas for constrained intent, MCP as enforcement layer. "Treat agents like distributed systems, not chat flows." Feb 2026. Reinforces Rules 24 (Engineer Multi-Agent Systems), 25 (Craft ACI)
+148. [LiVigni (GitHub) — Maximizing Copilot's Agentic Capabilities](https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/) — Architecture-aware multi-step workflows: system decomposition, modular services, schema migrations, incremental refactoring, test modernization. "Agent mode is not for large sweeping rewrites." Feb 2026. Reinforces Rules 2 (Plan First), 4 (Small Steps), 8 (Structured Workflows)
+149. [Woolf — AI Agent Coding Skeptic Tries AI Agent Coding](https://minimaxir.com/2026/02/ai-agent-coding/) — Detailed practical experience porting scikit-learn to Rust using coding agents. Evidence of rapid agent capability evolution. Feb 2026. Reinforces Rules 15 (Iterate), 17 (Know When to Take Over)
+150. [GitHub Blog — Building an Agentic Memory System for GitHub Copilot](https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/) — Cross-agent persistent memory architecture for knowledge continuity across sessions. Jan 2026. Reinforces Rules 12 (Knowledge Assets), 14 (Agent Environments)
+151. [GitHub Blog — Want Better AI Outputs? Try Context Engineering](https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/) — Custom instructions hierarchy, reusable prompts, context as engineering discipline. Jan 2026. Reinforces Rules 5 (Manage Context), 19 (Build Context Incrementally)
+152. [GitHub Blog — What's New with GitHub Copilot Coding Agent](https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/) — Model picker, self-review, built-in security scanning, custom agents, CLI handoff. Feb 2026. Reinforces Rules 21 (Security), 22 (Calibrate Review Depth)
+153. [GitHub Blog — Automate Repository Tasks with GitHub Agentic Workflows](https://github.blog/ai-and-ml/github-copilot/automate-repository-tasks-with-github-agentic-workflows/) — Agentic workflows in GitHub Actions for autonomous task completion. Feb 2026. Reinforces Rules 23 (Write for Autonomous Agents), 27 (Weave Into Workflow)
+
+</details>
+
+---
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+<p align="center">
+    <sub>Built with obsessive research and zero tolerance for "Agent X > Agent Y" arguments.</sub><br>
+    <sub>If this saved you time, ⭐ the repo.</sub>
+</p>
