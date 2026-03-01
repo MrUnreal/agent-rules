@@ -136,6 +136,46 @@ This rule governs how all other rules are created, improved, and validated.
 - **Ignoring failures.** If a test fails, a command errors, or a build breaks, address it immediately. Don't skip past it.
 - **Premature completion.** Don't declare a task complete when steps remain. Check the full requirements against what's been delivered.
 
+## 11. Use Red/Green TDD
+
+**Rationale:** Test-first development is the most effective way to ensure agent-generated code actually works and to prevent regressions as projects grow. — *Simon Willison, Agentic Engineering Patterns*
+
+- **Write tests before implementation.** Define what the code should do in test form before writing the code.
+- **Confirm tests fail first (red).** If tests pass before you implement, they're not testing your new code.
+- **Implement until tests pass (green).** The minimum code needed to make the failing tests pass.
+- **"Use red/green TDD" is a 5-word super-prompt.** Every good model understands this shorthand for test-first discipline.
+- **Start every session with "First run the tests."** This orients the agent: it discovers the test suite, understands project scope, and enters a testing mindset.
+
+## 12. Build and Reuse Knowledge Assets
+
+**Rationale:** You only need to figure out a useful trick once. If it's documented with working code, agents can consult it for any similar project in the future. — *Simon Willison, Agentic Engineering Patterns*
+
+- **Hoard working examples.** Collect proof-of-concepts, snippets, and solutions that demonstrate useful techniques.
+- **Recombine known solutions.** Tell agents to build new things by combining two or more existing working examples.
+- **Point agents at your own repos and notes.** "Clone X from GitHub and find examples of Y, then use that to build Z."
+- **Document tricks where agents can find them.** READMEs, TILs, blog posts, example repos — anything searchable.
+- **Code is cheap; knowledge is expensive.** Writing code is cheap now, but knowing what's possible and what's been validated is the real asset.
+
+## 13. Combat Cognitive Debt
+
+**Rationale:** When agent-generated code becomes a black box you don't understand, you can no longer confidently reason about it. This slows progress just like technical debt. — *Simon Willison; Margaret-Anne Storey*
+
+- **Request code walkthroughs.** After an agent builds something, ask it to explain how it works in a structured, linear walkthrough.
+- **Build interactive explanations.** For complex algorithms, have the agent create animations or interactive demos that make the logic intuitive.
+- **Review every diff.** If you can't explain what a module does, it doesn't go in. This is the line between agentic engineering and "vibe coding."
+- **Maintain a mental model.** You should always be able to describe, at a high level, what every part of your system does and why.
+- **Use agents to teach you.** Each project is a learning opportunity. Ask agents to explain not just what they did, but the underlying concepts.
+
+## 14. Design Environments for Agents
+
+**Rationale:** Most effort in autonomous agent workflows goes into designing the environment — tests, feedback loops, progress files — so agents can orient themselves without human intervention. — *Nicholas Carlini, Anthropic*
+
+- **Minimize context pollution.** Test harnesses should print a few lines of summary, not thousands of bytes. Log details to files; provide grep-able error formats.
+- **Account for agent limitations.** Agents can't tell time. They'll spend hours on tests unless you provide progress indicators and fast-path options.
+- **Maintain progress documents.** Extensive READMEs and status files updated frequently so each new session can orient itself.
+- **Make tasks independently solvable.** Structure work so multiple agents (or sessions) can make progress without stepping on each other.
+- **Design test output for agents, not humans.** Pre-compute summary statistics. Put `ERROR` on the same line as the reason. Make output parseable.
+
 ---
 
 ## Quick Reference
@@ -153,3 +193,7 @@ This rule governs how all other rules are created, improved, and validated.
 | 8 | Structured Workflows | Follow the right workflow for the task type |
 | 9 | Delegate | Parallelize independent work, use subagents |
 | 10 | Avoid Anti-Patterns | No kitchen sinks, no over-correction, no skipping failures |
+| 11 | Red/Green TDD | Write tests first, confirm they fail, then implement |
+| 12 | Knowledge Assets | Hoard working examples; agents can recombine them |
+| 13 | Cognitive Debt | Understand your code; don't let it become a black box |
+| 14 | Agent Environments | Design tests, logs, and progress files for agent consumption |
