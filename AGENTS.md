@@ -261,6 +261,29 @@ This rule governs how all other rules are created, improved, and validated.
 - **"Imagine you're on call."** Would you deploy this change tonight and sleep soundly? If not, increase your review depth.
 - **Build intuition over time.** These assessments become second nature. The goal isn't a checklist — it's developing judgment for when to trust and when to verify.
 
+## 23. Write for Autonomous Agents
+
+**Rationale:** Interactive chat is only one mode. Increasingly, agents work asynchronously — picking up issues, executing in the background, and submitting results without real-time human guidance. Writing effective tasks for autonomous agents is a distinct and critical skill. — *Ellich & Etcovitch, GitHub; Mitchell Hashimoto*
+
+- **Write issues as if for a newcomer.** The agent has no tribal knowledge. Include explicit context: what the feature does, where it lives in the codebase, and what patterns to follow.
+- **Include examples of desired patterns.** Link to or paste similar implementations. "Follow the pattern in `src/handlers/userHandler.ts`" is worth more than a paragraph of description.
+- **Make tasks atomic and self-contained.** Each task should be completable independently without requiring cross-task coordination. If a task has prerequisites, make them explicit.
+- **Define done criteria in the task.** "Add a REST endpoint for /widgets that returns JSON, passes the existing integration test suite, and follows the error handling pattern in handlers/" is verifiable. "Improve the API" is not.
+- **Leverage human strengths for human work.** Humans excel at ambiguity resolution, cross-system architectural decisions, and understanding *why*. Agents excel at tireless execution, repetitive transformations, and exploring parallel possibilities.
+- **Provide custom instructions at the right scope.** Repository-level instructions for project conventions. Organization-level for cross-repo standards. Task-level for specific constraints.
+
+## 24. Engineer Multi-Agent Systems Deliberately
+
+**Rationale:** Multi-agent workflows — where agents hand off to other agents, share state, or coordinate actions — fail from the same causes as distributed systems: shared mutable state, implicit ordering assumptions, and unvalidated boundaries. Treat agent-to-agent interfaces with the same rigor as service-to-service APIs. — *Davis, GitHub Engineering*
+
+- **Use typed schemas at every agent boundary.** Define the exact shape of data each agent produces and consumes. Treat schema violations as contract failures, not recoverable errors.
+- **Constrain allowed actions.** Don't give agents open-ended capabilities. Define action schemas that enumerate exactly what each agent is allowed to do. Reject anything outside the schema.
+- **Design for failure first.** Assume every agent call can fail, time out, or return garbage. Build retry logic, fallback paths, and circuit breakers before adding features.
+- **Validate at boundaries, not after.** Check inputs before passing them to the next agent. Don't rely on downstream agents to handle bad upstream output.
+- **Log intermediate state.** Capture what each agent received, decided, and produced. Without this, debugging multi-agent failures is nearly impossible.
+- **Expect retries and partial failures.** Agents are non-deterministic. The same input may produce different outputs. Design for idempotency where possible.
+- **Treat agents like distributed systems, not chat flows.** Apply the same engineering discipline: contract testing, observability, graceful degradation, and explicit failure handling.
+
 ---
 
 ## Quick Reference
@@ -290,3 +313,5 @@ This rule governs how all other rules are created, improved, and validated.
 | 20 | Treat Failures as Signals | Fix the system (docs, linters, tests), not just the prompt |
 | 21 | Security-Conscious Use | Vet MCP servers, apply least privilege, guard against approval fatigue |
 | 22 | Calibrate Review Depth | Assess probability × impact × detectability to decide review effort |
+| 23 | Write for Autonomous Agents | Write tasks as if for a newcomer; atomic, self-contained, verifiable |
+| 24 | Engineer Multi-Agent Systems | Typed schemas, constrained actions, design for failure, log everything |
