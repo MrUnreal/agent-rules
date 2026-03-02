@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+405%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+408%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 405+ authoritative sources.<br>
+    29 battle-tested rules distilled from 408+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (405)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (408)</strong> — click to expand</summary>
 
 <br>
 
@@ -538,6 +538,9 @@ Rules are distilled from these authoritative sources:
 403. [Qin et al. — "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs" (Tsinghua/Yale, 2023)](https://arxiv.org/abs/2307.16789) — General tool-use framework encompassing data construction, model training, and evaluation across 16,464 real-world RESTful APIs spanning 49 categories. Introduces ToolBench for instruction-tuning, a depth-first search-based decision tree for evaluating multiple reasoning traces, ToolEval for automatic evaluation, and a neural API retriever. ToolLLaMA achieves comparable performance to ChatGPT on tool use. Authors: Qin, Liang, Ye, Zhu, Yan, Lu et al. Reinforces Rules 25 (Agent-Computer Interfaces — tool use at massive scale), 14 (Agent Environments — automatic evaluation frameworks for tool use), 2 (Plan First — decision tree expands the reasoning search space)
 404. [Hong et al. — "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework" (DeepWisdom, 2023)](https://arxiv.org/abs/2308.00352) — Multi-agent framework that encodes Standardized Operating Procedures (SOPs) into prompt sequences for streamlined workflows. Uses assembly line paradigm to assign diverse roles (product manager, architect, engineer, QA) to specialized agents. Agents verify intermediate results to reduce cascading hallucinations from naive LLM chaining. Generates more coherent solutions than chat-based multi-agent systems. Authors: Hong, Zhuge, Chen, Zheng, Cheng, Zhang et al. Reinforces Rules 24 (Multi-Agent Systems — SOPs as typed contracts between agent roles), 8 (Structured Workflows — assembly line with verification at each stage), 3 (Verify Work — intermediate result verification prevents cascading errors)
 405. [Zhou et al. — "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models" (UIUC, 2024)](https://arxiv.org/abs/2310.04406) — First general framework synergizing LM reasoning, acting, and planning via Monte Carlo Tree Search. Uses LM-powered value functions and self-reflections for proficient exploration, incorporating environment feedback for adaptive problem-solving. Achieves 92.7% pass@1 on HumanEval with GPT-4 and competitive web navigation performance without gradient-based training. Authors: Zhou, Yan, Shlapentokh-Rothman, Wang, Wang. Reinforces Rules 2 (Plan First — systematic search over solution space), 15 (Iterate — self-reflection and backtracking improve decisions), 3 (Verify Work — environment feedback as external verification signal)
+406. [Gemini Team Google — "Gemini 1.5: Unlocking Multimodal Understanding Across Millions of Tokens of Context" (Google, 2024)](https://arxiv.org/abs/2403.05530) — Next-generation multimodal model achieving near-perfect recall (>99%) up to at least 10M tokens of context, a generational leap over Claude 3.0 (200k) and GPT-4 Turbo (128k). Demonstrates 26-75% time savings across 10 job categories and learns to translate an extremely low-resource language from a single grammar manual. Authors: Georgiev, Lei, Burnell, Bai, Gulati et al. Reinforces Rules 5 (Manage Context — massive context windows fundamentally change what agents can process), 28 (Agent-Legible Codebase — with sufficient context, entire repos become loadable)
+407. [Wang et al. — "OpenHands: An Open Platform for AI Software Developers as Generalist Agents" (UIUC et al., ICLR 2025)](https://arxiv.org/abs/2407.16741) — Open platform enabling AI agents to write code, interact with command lines, and browse the web. Features sandboxed environments for safe code execution, coordination between multiple agents, and integrated evaluation benchmarks across 15+ tasks including SWE-bench and WebArena. 2.1K+ contributions from 188+ contributors. Authors: Wang, Li, Song, Xu, Tang et al. Reinforces Rules 21 (Security — sandboxed execution as core platform primitive), 14 (Agent Environments — platform designed for agent-native interaction), 24 (Multi-Agent Systems — built-in agent coordination)
+408. [Zhang et al. — "AutoCodeRover: Autonomous Program Improvement" (NUS, ISSTA 2024)](https://arxiv.org/abs/2404.05427) — Automated approach for solving GitHub issues using LLMs combined with AST-level code search (classes/methods) and spectrum-based fault localization. Achieves 19% on SWE-bench-lite at average cost of $0.43 USD per issue, outperforming SWE-agent. Software engineering oriented: works on program representation (abstract syntax tree) rather than treating projects as file collections. Authors: Zhang, Ruan, Fan, Roychoudhury. Reinforces Rules 1 (Explore First — structured code search via AST > flat file search), 25 (ACI — program structure representation improves agent understanding), 8 (Structured Workflows — iterative search with fault localization)
 
 </details>
 
