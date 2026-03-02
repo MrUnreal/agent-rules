@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+396%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+399%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 396+ authoritative sources.<br>
+    29 battle-tested rules distilled from 399+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (396)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (399)</strong> — click to expand</summary>
 
 <br>
 
@@ -529,6 +529,9 @@ Rules are distilled from these authoritative sources:
 394. [Chen et al. — "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models" (UCLA, ICML 2024)](https://arxiv.org/abs/2401.01335) — Proposes SPIN (Self-Play fIne-tuNing) where an LLM refines itself by playing against previous iterations, generating its own training data and learning to distinguish self-generated from human-annotated responses. Achieves convergence when model distribution aligns with target data distribution. Outperforms DPO with extra GPT-4 data. Authors: Chen, Deng, Yuan, Ji, Gu. Reinforces Rules 15 (Iterate, Don't One-Shot — iterative self-improvement produces better results than single-pass training), 11 (Red/Green TDD — self-play as a verify-and-refine loop), 3 (Verify Work — model learns by evaluating its own outputs)
 395. [Hui et al. — "Qwen2.5-Coder Technical Report" (Alibaba, 2024)](https://arxiv.org/abs/2409.12186) — Introduces Qwen2.5-Coder series (0.5B to 32B parameters) pretrained on 5.5 trillion tokens with meticulous data cleaning, scalable synthetic data generation, and balanced data mixing. Achieves SOTA on 10+ benchmarks covering code generation, completion, reasoning, and repair, consistently outperforming larger models of similar size. Authors: Hui, Yang, Cui, Yang, Liu, Zhang et al. Reinforces Rules 12 (Knowledge Assets — data curation quality matters more than quantity), 28 (Agent-Legible Codebase — models benefit from clean, well-structured training code)
 396. [Gemini Team Google — "Gemini: A Family of Highly Capable Multimodal Models" (Google DeepMind, 2024)](https://arxiv.org/abs/2312.11805) — Introduces Gemini Ultra/Pro/Nano with remarkable image, audio, video, and text understanding. First model to achieve human-expert performance on MMLU. Advances SOTA on 30 of 32 benchmarks. Discusses responsible deployment across Gemini, Google AI Studio, and Cloud Vertex AI. Authors: Anil, Borgeaud, Alayrac, Yu, Soricut et al. Reinforces Rules 22 (Calibrate Review Depth — stronger models shift the probability dimension of risk assessment), 17 (Know When to Take Over — human-expert performance on exams doesn't mean human-expert performance on all tasks), 21 (Security-Conscious Use — responsible deployment considerations)
+397. [Weng, Lilian — "LLM Powered Autonomous Agents" (OpenAI / Lil'Log, Jun 2023)](https://lilianweng.github.io/posts/2023-06-23-agent/) — Foundational survey decomposing LLM-powered agents into three components: Planning (task decomposition, self-reflection via ReAct and Reflexion), Memory (short-term as in-context learning, long-term as external vector stores with MIPS), and Tool Use (API calls, HuggingGPT, API-Bank). Identifies key challenges: finite context length, long-term planning difficulty, and unreliable natural language interfaces requiring extensive output parsing. Covers AutoGPT, GPT-Engineer, and generative agent simulations. Author: Weng. Reinforces Rules 2 (Plan First — task decomposition is essential), 5 (Manage Context — finite context as fundamental constraint), 15 (Iterate — self-reflection and refinement loops), 25 (Agent-Computer Interfaces — tool use as core agent capability), 14 (Agent Environments — designing systems that support agent workflows)
+398. [OpenAI — "Function Calling Guide" (OpenAI Developer Docs, 2025)](https://developers.openai.com/api/docs/guides/function-calling) — Official guide for connecting models to external tools via function calling. Recommends writing clear tool descriptions with the "intern test" (can an intern use the function given only the description?), keeping functions under 20, offloading burden to code, combining sequential functions, and using strict mode for guaranteed schema conformance. Functions count against context limits. Covers parallel calling, streaming, custom tools, and context-free grammars for constrained outputs. Reinforces Rules 25 (Agent-Computer Interfaces — tool description best practices), 24 (Multi-Agent Systems — typed schemas at boundaries), 5 (Manage Context — tool definitions compete for context budget)
+399. [Anthropic — "Tool Use with Claude" (Anthropic Developer Docs, 2025)](https://platform.claude.com/docs/en/docs/build-with-claude/tool-use/overview) — Official documentation for Claude's tool use API covering client tools (user-defined, computer use, text editor) and server tools (web search, web fetch). Demonstrates MCP tool integration by converting MCP schemas to Claude format. Supports strict tool use via Structured Outputs for guaranteed schema validation. Notes that adding even simple tools produces "outsized capability gains" on benchmarks like SWE-bench. Reinforces Rules 25 (Agent-Computer Interfaces — well-designed tools dramatically improve capability), 24 (Multi-Agent Systems — strict schema validation at boundaries), 12 (Knowledge Assets — MCP as reusable tool infrastructure)
 
 </details>
 
