@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+408%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+411%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 408+ authoritative sources.<br>
+    29 battle-tested rules distilled from 411+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (408)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (411)</strong> — click to expand</summary>
 
 <br>
 
@@ -541,6 +541,9 @@ Rules are distilled from these authoritative sources:
 406. [Gemini Team Google — "Gemini 1.5: Unlocking Multimodal Understanding Across Millions of Tokens of Context" (Google, 2024)](https://arxiv.org/abs/2403.05530) — Next-generation multimodal model achieving near-perfect recall (>99%) up to at least 10M tokens of context, a generational leap over Claude 3.0 (200k) and GPT-4 Turbo (128k). Demonstrates 26-75% time savings across 10 job categories and learns to translate an extremely low-resource language from a single grammar manual. Authors: Georgiev, Lei, Burnell, Bai, Gulati et al. Reinforces Rules 5 (Manage Context — massive context windows fundamentally change what agents can process), 28 (Agent-Legible Codebase — with sufficient context, entire repos become loadable)
 407. [Wang et al. — "OpenHands: An Open Platform for AI Software Developers as Generalist Agents" (UIUC et al., ICLR 2025)](https://arxiv.org/abs/2407.16741) — Open platform enabling AI agents to write code, interact with command lines, and browse the web. Features sandboxed environments for safe code execution, coordination between multiple agents, and integrated evaluation benchmarks across 15+ tasks including SWE-bench and WebArena. 2.1K+ contributions from 188+ contributors. Authors: Wang, Li, Song, Xu, Tang et al. Reinforces Rules 21 (Security — sandboxed execution as core platform primitive), 14 (Agent Environments — platform designed for agent-native interaction), 24 (Multi-Agent Systems — built-in agent coordination)
 408. [Zhang et al. — "AutoCodeRover: Autonomous Program Improvement" (NUS, ISSTA 2024)](https://arxiv.org/abs/2404.05427) — Automated approach for solving GitHub issues using LLMs combined with AST-level code search (classes/methods) and spectrum-based fault localization. Achieves 19% on SWE-bench-lite at average cost of $0.43 USD per issue, outperforming SWE-agent. Software engineering oriented: works on program representation (abstract syntax tree) rather than treating projects as file collections. Authors: Zhang, Ruan, Fan, Roychoudhury. Reinforces Rules 1 (Explore First — structured code search via AST > flat file search), 25 (ACI — program structure representation improves agent understanding), 8 (Structured Workflows — iterative search with fault localization)
+409. [Wang et al. — "Executable Code Actions Elicit Better LLM Agents" (UIUC, ICML 2024)](https://arxiv.org/abs/2402.01030) — Proposes CodeAct: using executable Python code as a unified action space for LLM agents instead of JSON or constrained text formats. Achieves up to 20% higher success rate on API-Bank. Agents can dynamically revise prior actions and compose multiple tools through multi-turn code interactions. CodeActAgent finetuned from Llama2/Mistral performs sophisticated tasks including model training with autonomous self-debugging. Authors: Wang, Chen, Yuan, Zhang, Li, Peng, Ji. Reinforces Rules 25 (ACI — "Prefer code as the action format" directly validated — code outperforms JSON for agent actions), 15 (Iterate — multi-turn code revision improves agent performance)
+410. [Huang et al. — "AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation" (King's College London, 2024)](https://arxiv.org/abs/2312.13010) — Multi-agent framework with three specialized agents: programmer agent, test designer agent, and test executor agent. Achieves 96.3% pass@1 on HumanEval and 91.8% on MBPP with GPT-4 while using fewer tokens than SOTA. Test executor provides feedback to programmer for iterative refinement. Authors: Huang, Zhang, Luck, Bu, Qing, Cui. Reinforces Rules 24 (Multi-Agent Systems — specialized roles with clear boundaries), 11 (Red/Green TDD — test designer + test executor mirror TDD workflow), 3 (Verify Work — test executor feedback as verification loop)
+411. [Gauthier — "Aider LLM Leaderboards" (Aider, 2025)](https://aider.chat/docs/leaderboards/) — Practical coding agent tool that benchmarks LLMs on 225 challenging Exercism coding exercises across C++, Go, Java, JavaScript, Python, and Rust. Evaluates LLMs on their ability to follow instructions and edit code successfully without human intervention. Provides empirical data on which models perform best at autonomous code editing and refactoring tasks. Author: Gauthier. Reinforces Rules 14 (Agent Environments — systematic benchmarking of agent code editing capabilities), 25 (ACI — practical evaluation of code editing interface quality), 3 (Verify Work — automated benchmark as verification)
 
 </details>
 
