@@ -64,6 +64,7 @@ This rule governs how all other rules are created, improved, and validated.
 - **Verify the actual output.** Don't assume your change works — confirm it by running the code or inspecting the result.
 - **Test edge cases.** If you implemented a function, test it with empty input, null values, boundary conditions.
 - **Never declare "done" without verification.** If you can't verify, explicitly state what remains unverified.
+- **Create verification artifacts.** When existing tests don't cover your change, write a verification script or test before moving on. Produce observable proof — test output, screenshots, diff summaries. Specify verification criteria at the start of a task; this is the single highest-leverage behavior for agent productivity.
 
 ## 4. Make Small, Incremental Changes
 
@@ -84,6 +85,7 @@ This rule governs how all other rules are created, improved, and validated.
 - **Seed context with existing code.** Paste in or reference the relevant modules, types, or patterns so the agent starts from the right foundation.
 - **Start simple, then iterate to complex.** Begin with a minimal version and add complexity incrementally — each step builds on verified context.
 - **Clear between unrelated tasks.** Don't let context from task A pollute task B.
+- **Handle context overflow.** When context grows large, externalize state to files rather than truncating. Summarize old context rather than dropping it. Treat context as a budget — compress aggressively when approaching limits.
 
 ## 6. Communicate Clearly
 
@@ -114,6 +116,7 @@ This rule governs how all other rules are created, improved, and validated.
 - **For debugging:** Reproduce → Isolate → Fix → Verify fix → Add regression test.
 - **For refactoring:** Identify target → Ensure test coverage → Refactor → Verify tests pass → Commit.
 - **For code review:** Read the diff → Check for correctness → Check for edge cases → Check for style → Provide actionable feedback.
+- **For high-stakes changes:** Write → Review → Revise. Use a separate review pass — ideally with a different prompt or perspective — to catch errors the writing pass missed.
 - **Track progress.** Use todo lists, checkboxes, or task trackers to maintain visibility on multi-step work.
 
 ## 9. Delegate and Parallelize
@@ -136,6 +139,7 @@ This rule governs how all other rules are created, improved, and validated.
 - **Vague prompts propagating vague output.** If the input is vague, don't produce vague output — instead, ask for specifics or propose concrete alternatives.
 - **Ignoring failures.** If a test fails, a command errors, or a build breaks, address it immediately. Don't skip past it.
 - **Premature completion.** Don't declare a task complete when steps remain. Check the full requirements against what's been delivered.
+- **Fixing a derailed agent.** When an agent goes off-track, revert to the last known-good state and re-run from the plan. Reverting is almost always faster than debugging accumulated mess. Use checkpoints, git stash, or branches to make reverting cheap.
 
 ## 11. Use Red/Green TDD
 
@@ -176,6 +180,8 @@ This rule governs how all other rules are created, improved, and validated.
 - **Maintain progress documents.** Extensive READMEs and status files updated frequently so each new session can orient itself.
 - **Make tasks independently solvable.** Structure work so multiple agents (or sessions) can make progress without stepping on each other.
 - **Design test output for agents, not humans.** Pre-compute summary statistics. Put `ERROR` on the same line as the reason. Make output parseable.
+- **Eliminate flaky tests before deploying agents.** A test that fails intermittently for humans will fail catastrophically at agent scale — agents cannot distinguish signal from noise. Ensure reproducible, deterministic environments.
+- **Externalize working state to files for long tasks.** Write progress, decisions, and intermediate state to filesystem files (progress.md, scratchpad.md). Rewrite these files rather than appending — stale context degrades performance.
 
 ## 15. Iterate, Don't One-Shot
 
@@ -249,7 +255,7 @@ This rule governs how all other rules are created, improved, and validated.
 - **Guard against approval fatigue.** Rapid code generation encourages rubber-stamping diffs. If you stop reading diffs, you stop catching bugs, vulnerabilities, and unwanted dependency additions. Slow down for security-critical paths.
 - **Monitor agent-initiated changes.** Track file system modifications, dependency additions, network calls, and configuration changes made during agent sessions. Unexpected changes are a signal, not noise.
 - **Include agent workflows in threat modeling.** Agents introduce new vectors: context poisoning (malicious data in fetched content), privilege escalation (agent runs commands you wouldn't), dependency confusion (agent adds unvetted packages).
-- **Sandbox when possible.** Run agent tasks in containers, VMs, or restricted environments — especially for untrusted codebases or when testing agent-suggested commands.
+- **Sandbox when possible.** Run agent tasks in containers, VMs, or restricted environments — especially for untrusted codebases or when testing agent-suggested commands. Sandboxing also increases autonomy: sandboxed agents stop for permission 40-84% less often because destructive actions are structurally impossible. Constraints enable autonomy.
 
 ## 22. Calibrate Review Depth to Risk
 
@@ -295,6 +301,7 @@ This rule governs how all other rules are created, improved, and validated.
 - **When tools fail, explain why specifically.** "Permission denied: sandbox blocks network access. Request escalation to proceed." is recoverable. "Error" is not. Specific failure messages reduce retry loops by 40%.
 - **Keep formats natural.** Use formats close to what models saw in training (markdown, plain text). Avoid formats requiring counting (diff chunk headers) or heavy escaping (code inside JSON strings).
 - **Test how agents actually use your tools.** Run many example inputs, observe failure modes, and iterate on descriptions. Tool design is empirical, not theoretical.
+- **Prefer code as the action format.** When designing how agents express actions, prefer executable code (Python, bash) over structured JSON. LLMs produce higher-quality reasoning and fewer errors when actions are code. Reserve JSON for data exchange at agent boundaries, not action specification.
 
 ## 26. Sustain Your Pace
 
