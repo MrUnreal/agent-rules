@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+414%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+417%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 414+ authoritative sources.<br>
+    29 battle-tested rules distilled from 417+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (414)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (417)</strong> — click to expand</summary>
 
 <br>
 
@@ -547,6 +547,9 @@ Rules are distilled from these authoritative sources:
 412. [Li et al. — "DevEval: Prompting Large Language Models to Tackle the Full Software Development Lifecycle" (Peking University, 2024)](https://arxiv.org/abs/2403.08604) — Comprehensive benchmark evaluating LLMs across the entire software development lifecycle: software design, environment setup, implementation, acceptance testing, and unit testing. Covers 4 programming languages with carefully designed metrics for each stage. Reveals that even GPT-4 fails to solve many real-world SDLC challenges. Authors: Li, Wu, Tang, Shi, Yang et al. Reinforces Rules 8 (Structured Workflows — full SDLC as benchmark validates structured approach), 14 (Agent Environments — lifecycle-stage benchmarking for agents), 3 (Verify Work — acceptance and unit testing as essential verification stages)
 413. [Islam et al. — "MapCoder: Multi-Agent Code Generation for Competitive Problem Solving" (BUET, 2024)](https://arxiv.org/abs/2405.11403) — Multi-agent framework with four specialized LLM agents replicating the human programming cycle: recalling relevant examples, planning, code generation, and debugging. Achieves SOTA pass@1 on HumanEval (93.9%), MBPP (83.1%), APPS (22.0%), CodeContests (28.5%), and xCodeEval (45.3%). Authors: Islam, Ali, Parvez. Reinforces Rules 24 (Multi-Agent Systems — four specialized agents with distinct roles), 2 (Plan First — planning agent before coding), 12 (Knowledge Assets — recall agent retrieves relevant examples before generating)
 414. [Patil et al. — "Gorilla: Large Language Model Connected with Massive APIs" (UC Berkeley, 2023)](https://arxiv.org/abs/2305.15334) — Finetuned LLaMA-based model that surpasses GPT-4 on writing API calls. Combined with document retriever, adapts to test-time document changes and version updates. Introduces APIBench covering HuggingFace, TorchHub, and TensorHub APIs. Substantially mitigates hallucination in API usage. Authors: Patil, Zhang, Wang, Gonzalez. Reinforces Rules 25 (ACI — accurate API call generation as core agent capability), 17 (Know When to Take Over — retrieval-augmented generation compensates for training cutoff), 12 (Knowledge Assets — document retrieval enables adaptation to updated APIs)
+415. [Chen et al. — "Teaching Large Language Models to Self-Debug" (Google Brain, 2023)](https://arxiv.org/abs/2304.05128) — Proposes Self-Debugging: LLMs debug their own predicted programs via few-shot demonstrations, including rubber duck debugging where the model explains code in natural language to identify mistakes without human feedback. Achieves up to 12% improvement on MBPP and 9% on hardest Spider problems. Improves sample efficiency by reusing failed predictions. Authors: Chen, Lin, Schärli, Zhou. Reinforces Rules 3 (Verify Work — self-verification through code explanation), 13 (Combat Cognitive Debt — code explanation as debugging technique), 15 (Iterate — iterative refinement from failed predictions)
+416. [Zhang et al. — "RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation" (Microsoft, EMNLP 2023)](https://arxiv.org/abs/2303.12570) — Framework for repository-level code completion using iterative retrieval-generation pipeline combining similarity-based retriever with pre-trained code LM. Improves in-file completion baseline by over 10% across all settings. Introduces RepoEval benchmark covering line, API invocation, and function body completion. Authors: Zhang, Chen, Zhang, Keung, Liu, Zan, Mao, Lou, Chen. Reinforces Rules 1 (Explore First — retrieval from repository context essential for completion), 5 (Manage Context — iterative retrieval gathers scattered repo information), 28 (Agent-Legible Codebase — repo structure impacts retrieval quality)
+417. [Si et al. — "Design2Code: Benchmarking Multimodal Code Generation for Automated Front-End Engineering" (Stanford, NAACL 2025)](https://arxiv.org/abs/2403.03163) — First real-world benchmark for converting visual designs to code, with 484 diverse webpages and automatic evaluation metrics. Tests GPT-4o, GPT-4V, Gemini, and Claude on multimodal prompting. Finds models mostly lag in recalling visual elements and generating correct layouts. Authors: Si, Zhang, Li, Yang, Liu, Yang. Reinforces Rules 14 (Agent Environments — multimodal benchmarking for code generation), 16 (Precise Specifications — visual input as precise specification for code), 3 (Verify Work — automatic rendering comparison as verification)
 
 </details>
 
