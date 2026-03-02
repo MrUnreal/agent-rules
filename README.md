@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+417%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+420%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 417+ authoritative sources.<br>
+    29 battle-tested rules distilled from 420+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (417)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (420)</strong> — click to expand</summary>
 
 <br>
 
@@ -550,6 +550,9 @@ Rules are distilled from these authoritative sources:
 415. [Chen et al. — "Teaching Large Language Models to Self-Debug" (Google Brain, 2023)](https://arxiv.org/abs/2304.05128) — Proposes Self-Debugging: LLMs debug their own predicted programs via few-shot demonstrations, including rubber duck debugging where the model explains code in natural language to identify mistakes without human feedback. Achieves up to 12% improvement on MBPP and 9% on hardest Spider problems. Improves sample efficiency by reusing failed predictions. Authors: Chen, Lin, Schärli, Zhou. Reinforces Rules 3 (Verify Work — self-verification through code explanation), 13 (Combat Cognitive Debt — code explanation as debugging technique), 15 (Iterate — iterative refinement from failed predictions)
 416. [Zhang et al. — "RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation" (Microsoft, EMNLP 2023)](https://arxiv.org/abs/2303.12570) — Framework for repository-level code completion using iterative retrieval-generation pipeline combining similarity-based retriever with pre-trained code LM. Improves in-file completion baseline by over 10% across all settings. Introduces RepoEval benchmark covering line, API invocation, and function body completion. Authors: Zhang, Chen, Zhang, Keung, Liu, Zan, Mao, Lou, Chen. Reinforces Rules 1 (Explore First — retrieval from repository context essential for completion), 5 (Manage Context — iterative retrieval gathers scattered repo information), 28 (Agent-Legible Codebase — repo structure impacts retrieval quality)
 417. [Si et al. — "Design2Code: Benchmarking Multimodal Code Generation for Automated Front-End Engineering" (Stanford, NAACL 2025)](https://arxiv.org/abs/2403.03163) — First real-world benchmark for converting visual designs to code, with 484 diverse webpages and automatic evaluation metrics. Tests GPT-4o, GPT-4V, Gemini, and Claude on multimodal prompting. Finds models mostly lag in recalling visual elements and generating correct layouts. Authors: Si, Zhang, Li, Yang, Liu, Yang. Reinforces Rules 14 (Agent Environments — multimodal benchmarking for code generation), 16 (Precise Specifications — visual input as precise specification for code), 3 (Verify Work — automatic rendering comparison as verification)
+418. [Gou et al. — "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing" (Tsinghua/Microsoft, ICLR 2024)](https://arxiv.org/abs/2305.11738) — Framework enabling LLMs to validate and progressively amend their own outputs through interaction with external tools (search engines for fact-checking, code interpreters for debugging). Demonstrates that external feedback is crucial for self-improvement — LLMs as "black boxes" need tool interaction to reliably self-correct. Consistently enhances performance across QA, math, and toxicity reduction. Authors: Gou, Shao, Gong, Shen, Yang, Duan, Chen. Reinforces Rules 3 (Verify Work — tool-interactive verification essential for self-correction), 15 (Iterate — progressive amendment through multi-round critiquing), 25 (ACI — tool interaction design determines correction quality)
+419. [Yang et al. — "InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback" (Princeton, 2023)](https://arxiv.org/abs/2306.14898) — Formulates interactive coding as a standard RL environment: code as actions, execution feedback as observations. Uses self-contained Docker environments for safe, reproducible execution. Language and platform agnostic, supports Bash, SQL, and Python action spaces. Compatible with ReAct and Plan & Solve prompting strategies. Authors: Yang, Prabhakar, Narasimhan, Yao. Reinforces Rules 14 (Agent Environments — RL formulation of interactive coding with Docker sandboxing), 21 (Security — Docker containers for safe execution), 25 (ACI — code as actions with execution feedback as observations)
+420. [Yao et al. — "ReAct: Synergizing Reasoning and Acting in Language Models" (Princeton/Google, ICLR 2023)](https://arxiv.org/abs/2210.03629) — Foundational framework for interleaving reasoning traces and task-specific actions in LLMs. Reasoning traces help induce/track/update action plans and handle exceptions; actions interface with external sources for additional information. Achieves 34% absolute improvement on ALFWorld and 10% on WebShop over RL baselines. Generates human-interpretable task-solving trajectories. Authors: Yao, Zhao, Yu, Du, Shafran, Narasimhan, Cao. Reinforces Rules 2 (Plan First — reasoning traces as explicit planning), 6 (Communicate — interpretable reasoning traces improve trustworthiness), 8 (Structured Workflows — interleaved reason-act as structured workflow pattern)
 
 </details>
 
