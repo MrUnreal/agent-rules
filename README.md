@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+411%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+414%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 411+ authoritative sources.<br>
+    29 battle-tested rules distilled from 414+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (411)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (414)</strong> — click to expand</summary>
 
 <br>
 
@@ -544,6 +544,9 @@ Rules are distilled from these authoritative sources:
 409. [Wang et al. — "Executable Code Actions Elicit Better LLM Agents" (UIUC, ICML 2024)](https://arxiv.org/abs/2402.01030) — Proposes CodeAct: using executable Python code as a unified action space for LLM agents instead of JSON or constrained text formats. Achieves up to 20% higher success rate on API-Bank. Agents can dynamically revise prior actions and compose multiple tools through multi-turn code interactions. CodeActAgent finetuned from Llama2/Mistral performs sophisticated tasks including model training with autonomous self-debugging. Authors: Wang, Chen, Yuan, Zhang, Li, Peng, Ji. Reinforces Rules 25 (ACI — "Prefer code as the action format" directly validated — code outperforms JSON for agent actions), 15 (Iterate — multi-turn code revision improves agent performance)
 410. [Huang et al. — "AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation" (King's College London, 2024)](https://arxiv.org/abs/2312.13010) — Multi-agent framework with three specialized agents: programmer agent, test designer agent, and test executor agent. Achieves 96.3% pass@1 on HumanEval and 91.8% on MBPP with GPT-4 while using fewer tokens than SOTA. Test executor provides feedback to programmer for iterative refinement. Authors: Huang, Zhang, Luck, Bu, Qing, Cui. Reinforces Rules 24 (Multi-Agent Systems — specialized roles with clear boundaries), 11 (Red/Green TDD — test designer + test executor mirror TDD workflow), 3 (Verify Work — test executor feedback as verification loop)
 411. [Gauthier — "Aider LLM Leaderboards" (Aider, 2025)](https://aider.chat/docs/leaderboards/) — Practical coding agent tool that benchmarks LLMs on 225 challenging Exercism coding exercises across C++, Go, Java, JavaScript, Python, and Rust. Evaluates LLMs on their ability to follow instructions and edit code successfully without human intervention. Provides empirical data on which models perform best at autonomous code editing and refactoring tasks. Author: Gauthier. Reinforces Rules 14 (Agent Environments — systematic benchmarking of agent code editing capabilities), 25 (ACI — practical evaluation of code editing interface quality), 3 (Verify Work — automated benchmark as verification)
+412. [Li et al. — "DevEval: Prompting Large Language Models to Tackle the Full Software Development Lifecycle" (Peking University, 2024)](https://arxiv.org/abs/2403.08604) — Comprehensive benchmark evaluating LLMs across the entire software development lifecycle: software design, environment setup, implementation, acceptance testing, and unit testing. Covers 4 programming languages with carefully designed metrics for each stage. Reveals that even GPT-4 fails to solve many real-world SDLC challenges. Authors: Li, Wu, Tang, Shi, Yang et al. Reinforces Rules 8 (Structured Workflows — full SDLC as benchmark validates structured approach), 14 (Agent Environments — lifecycle-stage benchmarking for agents), 3 (Verify Work — acceptance and unit testing as essential verification stages)
+413. [Islam et al. — "MapCoder: Multi-Agent Code Generation for Competitive Problem Solving" (BUET, 2024)](https://arxiv.org/abs/2405.11403) — Multi-agent framework with four specialized LLM agents replicating the human programming cycle: recalling relevant examples, planning, code generation, and debugging. Achieves SOTA pass@1 on HumanEval (93.9%), MBPP (83.1%), APPS (22.0%), CodeContests (28.5%), and xCodeEval (45.3%). Authors: Islam, Ali, Parvez. Reinforces Rules 24 (Multi-Agent Systems — four specialized agents with distinct roles), 2 (Plan First — planning agent before coding), 12 (Knowledge Assets — recall agent retrieves relevant examples before generating)
+414. [Patil et al. — "Gorilla: Large Language Model Connected with Massive APIs" (UC Berkeley, 2023)](https://arxiv.org/abs/2305.15334) — Finetuned LLaMA-based model that surpasses GPT-4 on writing API calls. Combined with document retriever, adapts to test-time document changes and version updates. Introduces APIBench covering HuggingFace, TorchHub, and TensorHub APIs. Substantially mitigates hallucination in API usage. Authors: Patil, Zhang, Wang, Gonzalez. Reinforces Rules 25 (ACI — accurate API call generation as core agent capability), 17 (Know When to Take Over — retrieval-augmented generation compensates for training cutoff), 12 (Knowledge Assets — document retrieval enables adaptation to updated APIs)
 
 </details>
 
