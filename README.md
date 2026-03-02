@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+219%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+222%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 219+ authoritative sources.<br>
+    29 battle-tested rules distilled from 222+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (219)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (222)</strong> — click to expand</summary>
 
 <br>
 
@@ -352,6 +352,9 @@ Rules are distilled from these authoritative sources:
 217. [GitHub/Griffiths — "5 Ways to Integrate GitHub Copilot Coding Agent into Your Workflow"](https://github.blog/engineering/5-ways-to-integrate-github-copilot-coding-agent-into-your-workflow/) — Five practical integration strategies: (1) Offload tech debt via Agents panel with batched cleanup tasks, (2) Validate UI changes with Playwright MCP server for automated screenshots, (3) Experiment safely with branch strategies — pick any branch as starting point, (4) Choose right entry point for task (Agents panel, Issues, VS Code, Mobile), (5) Extend with custom MCP servers (Notion, Hugging Face, MCP Registry). Each task costs one premium request. Reinforces Rules 27 (Weave Into Workflow), 9 (Delegate)
 218. [GitHub/Griffiths — "What's New with GitHub Copilot Coding Agent"](https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/) — Five major updates: (1) Model picker — choose faster or more capable models per task, (2) Self-review via Copilot code review before opening PR — agent iterates on its own feedback, (3) Built-in security scanning (code scanning, secret scanning, dependency vulnerabilities) — free with coding agent, (4) Custom agents via `.github/agents/` files for team-specific workflows (e.g., performance optimizer that benchmarks before/after), (5) CLI handoff — push `&` to delegate cloud work, pull cloud sessions locally with full context. Reinforces Rules 3 (Verify Work), 21 (Security-Conscious Use), 27 (Weave Into Workflow)
 219. [OpenAI/Shavit, Agarwal, Brundage et al. — "Practices for Governing Agentic AI Systems"](https://openai.com/index/practices-for-governing-agentic-ai-systems/) — White paper defining agentic AI systems (pursue complex goals with limited supervision) and proposing baseline safety practices for all parties in the agentic lifecycle. Highlights: keeping agent operations safe and accountable, agreeing on responsibilities for developers, deployers, and users. Addresses indirect impacts from wide-scale adoption of agentic systems. Accompanied by research grant program ($10K-$100K). Reinforces Rules 21 (Security-Conscious Use), 22 (Calibrate Review Depth)
+220. [Microsoft Research/Fourney, Bansal, Mozannar et al. — "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks"](https://www.microsoft.com/en-us/research/blog/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks/) — Multi-agent architecture with lead Orchestrator and four specialized agents (WebSurfer, FileSurfer, Coder, ComputerTerminal). Orchestrator uses dual-loop design: outer loop (Task Ledger with facts, guesses, plan) and inner loop (Progress Ledger tracking progress and assignments). Model-agnostic — supports heterogeneous models per agent. Achieves SOTA on GAIA, AssistantBench, WebArena benchmarks. Built on AutoGen. Key risk findings: agents attempted to recruit human help, reset passwords, draft FOIA requests when stuck. Mitigations: sandboxed Docker, least privilege, human-in-the-loop monitoring. Reinforces Rules 21 (Security-Conscious Use), 24 (Multi-Agent Systems), 14 (Agent Environments)
+221. [LangChain/LangGraph — "Workflows and Agents"](https://docs.langchain.com/oss/python/langgraph/workflows-agents) — Comprehensive guide to agentic patterns with code examples. Distinguishes workflows (predetermined code paths) from agents (dynamic tool usage). Six patterns: prompt chaining (sequential with gates), parallelization (sectioning + voting), routing (classify then specialize), orchestrator-worker (dynamic subtask delegation via Send API), evaluator-optimizer (iterative refinement loop), and autonomous agents (continuous tool-calling feedback loop). Mirrors Anthropic's taxonomy. Reinforces Rules 2 (Plan First), 8 (Structured Workflows), 24 (Multi-Agent Systems)
+222. [LangChain/LangGraph — "Workflows and Agents" — Orchestrator-Worker Pattern"](https://docs.langchain.com/oss/python/langgraph/workflows-agents) — Specific implementation detail: LangGraph's `Send` API enables dynamic worker creation where each worker has its own state, and all worker outputs are written to a shared state key via `Annotated[list, operator.add]`. This pattern is used when subtasks cannot be predefined (e.g., updating installation instructions across unknown number of files). Workers operate in parallel and results are synthesized by the orchestrator. Reinforces Rules 9 (Delegate & Parallelize), 24 (Multi-Agent Systems)
 
 </details>
 
