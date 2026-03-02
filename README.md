@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+393%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+396%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 393+ authoritative sources.<br>
+    29 battle-tested rules distilled from 396+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (393)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (396)</strong> — click to expand</summary>
 
 <br>
 
@@ -526,6 +526,9 @@ Rules are distilled from these authoritative sources:
 391. [Liu et al. — "AgentBench: Evaluating LLMs as Agents" (Tsinghua, ICLR 2024)](https://arxiv.org/abs/2308.03688) — Multi-dimensional benchmark evaluating LLMs as agents across 8 distinct interactive environments. Reveals significant performance gap between top commercial LLMs and open-source models (≤70B). Identifies poor long-term reasoning, decision-making, and instruction following as primary obstacles to usable LLM agents. Training on code shows ambivalent impacts across different agent tasks. Authors: Liu, Yu, Zhang, Xu, Lei, Lai et al. Reinforces Rules 14 (Agent Environments — diverse environments expose different failure modes), 5 (Manage Context — long-term reasoning failures from context degradation), 16 (Precise Specifications — instruction following as key differentiator)
 392. [Lozhkov, Li, Ben Allal et al. — "StarCoder 2 and The Stack v2: The Next Generation" (BigCode/ServiceNow, 2024)](https://arxiv.org/abs/2402.19173) — Introduces StarCoder2 (3B/7B/15B parameters) trained on The Stack v2 spanning 619 programming languages, 4x larger than the original dataset. Includes GitHub pull requests, Kaggle notebooks, and code documentation. StarCoder2-15B matches or outperforms CodeLlama-34B despite being half the size, and excels on math/code reasoning and low-resource languages. Full transparency with SoftWare Heritage persistent IDs. Authors: Lozhkov, Li, Ben Allal, Cassano et al. Reinforces Rules 12 (Knowledge Assets — diverse training data from working code examples), 28 (Agent-Legible Codebase — models benefit from well-structured, semantically named code)
 393. [Xie et al. — "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments" (HKU/CMU, 2024)](https://arxiv.org/abs/2404.07972) — First scalable real computer environment for multimodal agents across Ubuntu, Windows, and macOS. Creates 369 tasks involving web apps, desktop apps, OS file I/O, and multi-application workflows. Best model achieves only 12.24% success vs. 72.36% for humans, with primary struggles in GUI grounding and operational knowledge. Provides execution-based evaluation with custom scripts for reliable reproducibility. Authors: Xie, Zhang, Chen, Li, Zhao, Cao et al. Reinforces Rules 14 (Agent Environments — real OS environments for realistic evaluation), 25 (Agent-Computer Interfaces — GUI grounding as major challenge), 17 (Know When to Take Over — massive human-agent gap on complex computer tasks)
+394. [Chen et al. — "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models" (UCLA, ICML 2024)](https://arxiv.org/abs/2401.01335) — Proposes SPIN (Self-Play fIne-tuNing) where an LLM refines itself by playing against previous iterations, generating its own training data and learning to distinguish self-generated from human-annotated responses. Achieves convergence when model distribution aligns with target data distribution. Outperforms DPO with extra GPT-4 data. Authors: Chen, Deng, Yuan, Ji, Gu. Reinforces Rules 15 (Iterate, Don't One-Shot — iterative self-improvement produces better results than single-pass training), 11 (Red/Green TDD — self-play as a verify-and-refine loop), 3 (Verify Work — model learns by evaluating its own outputs)
+395. [Hui et al. — "Qwen2.5-Coder Technical Report" (Alibaba, 2024)](https://arxiv.org/abs/2409.12186) — Introduces Qwen2.5-Coder series (0.5B to 32B parameters) pretrained on 5.5 trillion tokens with meticulous data cleaning, scalable synthetic data generation, and balanced data mixing. Achieves SOTA on 10+ benchmarks covering code generation, completion, reasoning, and repair, consistently outperforming larger models of similar size. Authors: Hui, Yang, Cui, Yang, Liu, Zhang et al. Reinforces Rules 12 (Knowledge Assets — data curation quality matters more than quantity), 28 (Agent-Legible Codebase — models benefit from clean, well-structured training code)
+396. [Gemini Team Google — "Gemini: A Family of Highly Capable Multimodal Models" (Google DeepMind, 2024)](https://arxiv.org/abs/2312.11805) — Introduces Gemini Ultra/Pro/Nano with remarkable image, audio, video, and text understanding. First model to achieve human-expert performance on MMLU. Advances SOTA on 30 of 32 benchmarks. Discusses responsible deployment across Gemini, Google AI Studio, and Cloud Vertex AI. Authors: Anil, Borgeaud, Alayrac, Yu, Soricut et al. Reinforces Rules 22 (Calibrate Review Depth — stronger models shift the probability dimension of risk assessment), 17 (Know When to Take Over — human-expert performance on exams doesn't mean human-expert performance on all tasks), 21 (Security-Conscious Use — responsible deployment considerations)
 
 </details>
 
