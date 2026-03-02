@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+222%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+225%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 222+ authoritative sources.<br>
+    29 battle-tested rules distilled from 225+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (222)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (225)</strong> — click to expand</summary>
 
 <br>
 
@@ -355,6 +355,9 @@ Rules are distilled from these authoritative sources:
 220. [Microsoft Research/Fourney, Bansal, Mozannar et al. — "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks"](https://www.microsoft.com/en-us/research/blog/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks/) — Multi-agent architecture with lead Orchestrator and four specialized agents (WebSurfer, FileSurfer, Coder, ComputerTerminal). Orchestrator uses dual-loop design: outer loop (Task Ledger with facts, guesses, plan) and inner loop (Progress Ledger tracking progress and assignments). Model-agnostic — supports heterogeneous models per agent. Achieves SOTA on GAIA, AssistantBench, WebArena benchmarks. Built on AutoGen. Key risk findings: agents attempted to recruit human help, reset passwords, draft FOIA requests when stuck. Mitigations: sandboxed Docker, least privilege, human-in-the-loop monitoring. Reinforces Rules 21 (Security-Conscious Use), 24 (Multi-Agent Systems), 14 (Agent Environments)
 221. [LangChain/LangGraph — "Workflows and Agents"](https://docs.langchain.com/oss/python/langgraph/workflows-agents) — Comprehensive guide to agentic patterns with code examples. Distinguishes workflows (predetermined code paths) from agents (dynamic tool usage). Six patterns: prompt chaining (sequential with gates), parallelization (sectioning + voting), routing (classify then specialize), orchestrator-worker (dynamic subtask delegation via Send API), evaluator-optimizer (iterative refinement loop), and autonomous agents (continuous tool-calling feedback loop). Mirrors Anthropic's taxonomy. Reinforces Rules 2 (Plan First), 8 (Structured Workflows), 24 (Multi-Agent Systems)
 222. [LangChain/LangGraph — "Workflows and Agents" — Orchestrator-Worker Pattern"](https://docs.langchain.com/oss/python/langgraph/workflows-agents) — Specific implementation detail: LangGraph's `Send` API enables dynamic worker creation where each worker has its own state, and all worker outputs are written to a shared state key via `Annotated[list, operator.add]`. This pattern is used when subtasks cannot be predefined (e.g., updating installation instructions across unknown number of files). Workers operate in parallel and results are synthesized by the orchestrator. Reinforces Rules 9 (Delegate & Parallelize), 24 (Multi-Agent Systems)
+223. [Model Context Protocol — "What is MCP?"](https://modelcontextprotocol.io/introduction) — Official introduction to MCP, the open standard for connecting AI models to external data sources and tools. Uses the "USB-C for AI" analogy: one standardized protocol replacing fragmented M×N integrations. Three stakeholder benefits: app developers get a growing ecosystem of pre-built integrations, AI tool builders get access to every MCP-compatible host, and end users get better/more contextual AI interactions. Key design goals: standardized connections, model-controlled interaction, flexible integration. Reinforces Rules 25 (Craft Agent-Computer Interfaces), 28 (Agent-Legible Codebase)
+224. [Model Context Protocol — "Architecture Overview"](https://modelcontextprotocol.io/docs/concepts/architecture) — Deep technical specification of MCP's client-server architecture. Three participant roles: Hosts (LLM applications like Claude Desktop/IDEs), Clients (maintain 1:1 server connections inside hosts), and Servers (expose capabilities via primitives). Protocol uses JSON-RPC 2.0 over two transport layers: STDIO (local processes) and Streamable HTTP (remote services). Three server primitives: Tools (model-controlled, like API calls), Resources (application-controlled, like file contents), and Prompts (user-controlled templates). Three client primitives: Sampling (server-initiated LLM requests), Elicitation (server-initiated user input), and Roots (filesystem access points). Lifecycle: initialize with capability negotiation → operate with request/response + notifications → graceful shutdown. Reinforces Rules 24 (Multi-Agent Systems), 25 (Craft Agent-Computer Interfaces)
+225. [OpenAI — "Introducing GPT-5.3-Codex"](https://openai.com/index/introducing-gpt-5-3-codex/) — Announcement of OpenAI's most capable coding model. SOTA benchmarks: SWE-Bench Pro 56.8%, Terminal-Bench 2.0 77.3%, OSWorld-Verified 64.7%. Key innovations: interactive collaboration (real-time steering while agent works), self-bootstrapped training (used itself during training/deployment), custom skills (reusable task-specific tools), and 25% faster inference. First model classified "High capability" for cybersecurity by OpenAI's Preparedness team. Introduced Aardvark: OpenAI's security research agent. $10M in cybersecurity API credits program. Reinforces Rules 17 (Know When to Take Over — interactive steering), 21 (Security-Conscious Use), 25 (Craft ACI — custom skills)
 
 </details>
 
