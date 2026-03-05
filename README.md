@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+420%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+423%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 420+ authoritative sources.<br>
+    29 battle-tested rules distilled from 423+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (420)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (423)</strong> — click to expand</summary>
 
 <br>
 
@@ -553,6 +553,9 @@ Rules are distilled from these authoritative sources:
 418. [Gou et al. — "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing" (Tsinghua/Microsoft, ICLR 2024)](https://arxiv.org/abs/2305.11738) — Framework enabling LLMs to validate and progressively amend their own outputs through interaction with external tools (search engines for fact-checking, code interpreters for debugging). Demonstrates that external feedback is crucial for self-improvement — LLMs as "black boxes" need tool interaction to reliably self-correct. Consistently enhances performance across QA, math, and toxicity reduction. Authors: Gou, Shao, Gong, Shen, Yang, Duan, Chen. Reinforces Rules 3 (Verify Work — tool-interactive verification essential for self-correction), 15 (Iterate — progressive amendment through multi-round critiquing), 25 (ACI — tool interaction design determines correction quality)
 419. [Yang et al. — "InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback" (Princeton, 2023)](https://arxiv.org/abs/2306.14898) — Formulates interactive coding as a standard RL environment: code as actions, execution feedback as observations. Uses self-contained Docker environments for safe, reproducible execution. Language and platform agnostic, supports Bash, SQL, and Python action spaces. Compatible with ReAct and Plan & Solve prompting strategies. Authors: Yang, Prabhakar, Narasimhan, Yao. Reinforces Rules 14 (Agent Environments — RL formulation of interactive coding with Docker sandboxing), 21 (Security — Docker containers for safe execution), 25 (ACI — code as actions with execution feedback as observations)
 420. [Yao et al. — "ReAct: Synergizing Reasoning and Acting in Language Models" (Princeton/Google, ICLR 2023)](https://arxiv.org/abs/2210.03629) — Foundational framework for interleaving reasoning traces and task-specific actions in LLMs. Reasoning traces help induce/track/update action plans and handle exceptions; actions interface with external sources for additional information. Achieves 34% absolute improvement on ALFWorld and 10% on WebShop over RL baselines. Generates human-interpretable task-solving trajectories. Authors: Yao, Zhao, Yu, Du, Shafran, Narasimhan, Cao. Reinforces Rules 2 (Plan First — reasoning traces as explicit planning), 6 (Communicate — interpretable reasoning traces improve trustworthiness), 8 (Structured Workflows — interleaved reason-act as structured workflow pattern)
+421. [Brown et al. — "Language Models are Few-Shot Learners" (OpenAI, 2020)](https://arxiv.org/abs/2005.14165) — Foundational paper introducing GPT-3: 175B parameter autoregressive model demonstrating strong in-context few-shot learning without gradient updates or fine-tuning. Tasks and demonstrations specified purely via text interaction. Achieves competitive performance on translation, QA, cloze, and reasoning tasks. Establishes in-context learning as core LLM capability. Authors: Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan et al. Reinforces Rules 6 (Communicate — text-only interaction as universal interface), 15 (Iterate — few-shot examples enable in-context learning), 16 (Precise Specifications — in-context demonstrations as specifications)
+422. [Khattab et al. — "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines" (Stanford, 2023)](https://arxiv.org/abs/2310.03714) — Programming model abstracting LM pipelines as text transformation graphs with declarative modules. Modules learn by creating/collecting demonstrations of prompting, finetuning, augmentation, and reasoning. Compiler optimizes pipelines to maximize metrics. Self-bootstrapped DSPy programs outperform standard few-shot by 25-65% and expert-created demonstrations by 5-40% on math and retrieval tasks. Authors: Khattab, Singhvi, Maheshwari, Zhang, Santhanam, Vardhamanan, Haq, Sharma. Reinforces Rules 7 (Quality Code — LM pipelines as software artifacts with testing), 15 (Iterate — self-improvement through compiled optimization), 19 (Incremental Context — DSPy builds context from demonstrations)
+423. [Touvron et al. — "Llama 2: Open Foundation and Fine-Tuned Chat Models" (Meta, 2023)](https://arxiv.org/abs/2307.09288) — Collection of open-source pretrained and fine-tuned LLMs ranging from 7B to 70B parameters. Llama 2-Chat optimized for dialogue use cases, outperforms open-source chat models on most benchmarks, and may substitute for closed-source models. Detailed description of fine-tuning and safety approaches enables community-driven responsible development. Authors: Touvron, Martin, Stone, Albert, Almahairi, Babaei et al. Reinforces Rules 16 (Precise Specifications — foundation models as baselines requiring precise prompting), 20 (System Signals — open models enable inspection of prompting effectiveness vs. proprietary models)
 
 </details>
 
