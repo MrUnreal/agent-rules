@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+444%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+447%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 444+ authoritative sources.<br>
+    29 battle-tested rules distilled from 447+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (444)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (447)</strong> — click to expand</summary>
 
 <br>
 
@@ -577,6 +577,9 @@ Rules are distilled from these authoritative sources:
 442. [DeepSeek-AI et al. — "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" (DeepSeek, 2025)](https://arxiv.org/abs/2501.12948) — Shows reasoning can emerge from pure RL without human-labeled reasoning traces. Emergent behaviors include self-reflection, verification, and dynamic strategy adaptation. Strong gains on verifiable math/coding/STEM tasks; reported Nature 2025 publication with a revised 2026 arXiv version. Demonstrates scaling via distilled smaller models from reasoning-rich traces. Reinforces Rules 15 (Iterate — self-reflection and adaptive retry loops), 3 (Verify Work — explicit verification behaviors), 11 (Red/Green TDD — verifiable-reward training signal)
 443. [Muennighoff et al. — "s1: Simple test-time scaling" (Stanford/AI2, 2025)](https://arxiv.org/abs/2501.19393) — Introduces lightweight test-time scaling via budget forcing (terminate/extend reasoning budget) and a compact high-quality reasoning set (s1K). Demonstrates strong reasoning gains from controlled inference-time compute, including improvements on AIME24 and MATH with open models. Open-sources model, data, and code. Reinforces Rules 26 (Sustain Pace — test-time compute budget management), 2 (Plan First — explicit compute/time budgeting per task), 15 (Iterate — forcing additional deliberation to recover from early wrong paths)
 444. [Zhang et al. — "SoK: DARPA's AI Cyber Challenge (AIxCC): Competition Design, Architectures, and Lessons Learned" (DARPA/AIxCC Teams, 2026)](https://arxiv.org/abs/2602.07666) — Systematic analysis of the largest autonomous cyber reasoning competition (2023-2025), where LLM-based systems discover and remediate vulnerabilities in real OSS. Examines competition design, CRS architectures, execution traces, and performance drivers beyond leaderboard outcomes, surfacing practical limitations and deployment lessons. Reinforces Rules 21 (Security-Conscious Use — autonomous security work needs strict controls), 14 (Design Environments — benchmark and harness design shape outcomes), 20 (Treat Failures as System Signals — postmortems reveal harness and architecture gaps)
+445. [Brown-Cohen et al. — "Quantifying the Necessity of Chain of Thought through Opaque Serial Depth" (Anthropic, 2026)](https://arxiv.org/abs/2603.09786) — Formalizes when significant serial reasoning must be externalized into chain-of-thought using the concept of opaque serial depth. Provides upper bounds for Gemma 3 and asymptotic analysis across architectures; includes automated tooling to estimate depth in arbitrary networks. Suggests MoE may have lower opaque depth than dense models. Reinforces Rules 3 (Verify Work — CoT as monitorable reasoning artifact), 21 (Security-Conscious Use — interpretable reasoning supports oversight), 25 (Craft ACIs — architecture/interface choices affect monitorability)
+446. [Dobler et al. — "Multilingual Reasoning Gym: Multilingual Scaling of Procedural Reasoning Environments" (2026)](https://arxiv.org/abs/2603.10793) — Extends procedural Reasoning Gym to 14 languages with 94 tasks, preserving verifiable reward structure, adjustable difficulty, and effectively unbounded problem generation. Enables cross-lingually parallel data generation and multilingual RLVR/evaluation pipelines. Reinforces Rules 14 (Design Environments — procedural, verifiable, scalable evaluation harnesses), 3 (Verify Work — verifiable multilingual task generation), 16 (Precise Specifications — template-controlled multilingual task definitions)
+447. [Gwak et al. — "Not the Example, but the Process: How Self-Generated Examples Enhance LLM Reasoning" (AACL-IJCNLP 2025)](https://arxiv.org/abs/2602.15863) — Shows gains from self-generated prompting come primarily from the generation process itself (integrated prompting), not from reusing generated examples in decoupled form. Across 5 architectures, integrated prompting consistently outperforms zero-shot and decoupled variants; attention analysis supports the process-first hypothesis. Reinforces Rules 15 (Iterate — reasoning quality improves through self-generation process), 2 (Plan First — integrated create-and-solve workflows), 6 (Communicate — prompt structure/process strongly influences outcomes)
 
 </details>
 
