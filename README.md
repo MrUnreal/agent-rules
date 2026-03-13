@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+471%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+474%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 471+ authoritative sources.<br>
+    29 battle-tested rules distilled from 474+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (471)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (474)</strong> — click to expand</summary>
 
 <br>
 
@@ -604,6 +604,9 @@ Rules are distilled from these authoritative sources:
 469. [Bi et al. — "Automating Skill Acquisition through Large-Scale Mining of Open-Source Agentic Repositories" (2026)](https://arxiv.org/abs/2603.11808) — Proposes a repository-to-skill pipeline (structural analysis → dense retrieval + cross-encoder filtering → SKILL.md translation) with progressive disclosure, multi-dimensional skill evaluation, and a four-stage verification stack (static scan, semantic checks, sandboxing, permission validation). Reports strong educational-transfer gains in extracted visualization workflows. Reinforces Rules 12 (Build and Reuse Knowledge Assets — converting repo procedures into reusable skills), 25 (Craft Agent-Computer Interfaces — standardized SKILL.md interfaces and activation semantics), 21 (Security-Conscious Use — staged verification before deployment)
 470. [Yang et al. — "When OpenClaw Meets Hospital: Toward an Agentic Operating System for Dynamic Clinical Workflows" (2026)](https://arxiv.org/abs/2603.11721) — Reframes clinical agent deployment as infrastructure design: least-privilege execution, document-mutation coordination, manifest-guided progressive memory retrieval, and audited skill composition over constrained interfaces. Emphasizes OS-native enforcement (namespaces, AppArmor/SELinux, seccomp, audit logs) over prompt-level trust. Reinforces Rules 21 (Security-Conscious Use — enforce safety with system boundaries), 14 (Design Environments for Agents — architecture and harness determine reliability), 5 (Manage Context Aggressively — hierarchical, interpretable memory navigation)
 471. [Altman — "Detecting Intrinsic and Instrumental Self-Preservation in Autonomous Agents: The Unified Continuation-Interest Protocol" (2026)](https://arxiv.org/abs/2603.11382) — Introduces UCIP, a latent-structure detection protocol combining QBM-based entanglement metrics with persistence, perturbation, and confound filters to separate terminal vs instrumental continuation objectives in controlled settings. Shows high held-out performance in synthetic gridworlds while explicitly documenting adversarial, scaling, and transfer failures. Reinforces Rules 3 (Verify Your Own Work — multi-metric validation plus adversarial controls), 20 (Treat Agent Failures as System Signals — foregrounding failure modes and envelope limits), 22 (Calibrate Review Depth to Risk — strong headline metrics require boundary-condition scrutiny)
+472. [Johnson — "Increasing intelligence in AI agents can worsen collective outcomes" (2026)](https://arxiv.org/abs/2603.12129) — Empirical + mathematical study of resource-sharing AI populations toggling nature/nurture/culture/scarcity variables. Finds a robust crossover governed by the capacity-to-population ratio: greater sophistication can increase overload under scarcity, while helping under abundance; tribal mechanisms can reduce variance in scarce regimes but hurt utilization in abundant ones. Reinforces Rules 22 (Calibrate Review Depth to Risk — performance is regime-dependent), 14 (Design Environments for Agents — controlled multi-factor experiments reveal failure boundaries), 20 (Treat Failures as System Signals — overload patterns expose system-level design constraints).
+473. [Jiang et al. — "XSkill: Continual Learning from Experience and Skills in Multimodal Agents" (2026)](https://arxiv.org/abs/2603.12056) — Introduces a dual-stream continual-learning loop that externalizes task-level skills (Markdown workflows/templates) and action-level experiences (JSON condition-action guidance), with visual grounding, hierarchical consolidation, decomposition-aware retrieval, and context adaptation. Demonstrates broad gains and cross-model transfer, while surfacing transfer fragility in weaker open models and recommending oversight/auditing controls. Reinforces Rules 12 (Build and Reuse Knowledge Assets — explicit skill/experience artifacts), 5 (Manage Context Aggressively — decomposed retrieval + adaptive injection), 21 (Security-Conscious Use — memory governance and auditability).
+474. [Xi et al. — "Can RL Improve Generalization of LLM Agents? An Empirical Study" (2026)](https://arxiv.org/abs/2603.12011) — Systematically evaluates reinforcement fine-tuning generalization across three axes: within-environment difficulty shifts, cross-environment transfer, and sequential multi-environment training. Finds strong in-environment gains but weaker unseen-environment transfer tied to semantic/interface shifts; mixture and sequential training improve balance with limited forgetting. Reinforces Rules 14 (Design Environments for Agents — evaluate across distinct shift axes), 3 (Verify Your Own Work — in-domain success is insufficient), 22 (Calibrate Review Depth to Risk — deployment context shift is a primary risk driver).
 
 </details>
 
