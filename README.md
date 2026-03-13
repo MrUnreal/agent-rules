@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+462%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+465%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 462+ authoritative sources.<br>
+    29 battle-tested rules distilled from 465+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (462)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (465)</strong> — click to expand</summary>
 
 <br>
 
@@ -595,6 +595,9 @@ Rules are distilled from these authoritative sources:
 460. [Liu et al. — "Agentic Critical Training" (2026)](https://arxiv.org/abs/2603.08706) — Introduces ACT, a reinforcement learning paradigm that explicitly rewards selecting better actions among alternatives, training genuine reflective judgment instead of imitation of pre-written reflection text. Shows consistent gains across agent benchmarks (+5.07 over imitation learning, +4.62 over baseline RL) with improved OOD generalization and reasoning transfer. Reinforces Rules 15 (Iterate — reflective improvement via contrastive feedback), 3 (Verify Work — explicit better/worse action judgment), 11 (Red/Green TDD — reward signal grounded in verifiable action quality)
 461. [Jajodia et al. — "Before You Hand Over the Wheel: Evaluating LLMs for Security Incident Analysis" (2026)](https://arxiv.org/abs/2603.06422) — Proposes SIABENCH, an agentic evaluation framework and dataset for security incident analysis, spanning deep incident workflows and alert triage with extensible scenarios and models. Benchmarks 11 major LLMs across broad forensics tasks and emphasizes dynamic, multi-step analyst workflows. Reinforces Rules 21 (Security-Conscious Use — high-risk domain requires rigorous evaluation), 14 (Design Environments — extensible incident-analysis harness), 3 (Verify Work — benchmark-driven validation across diverse task classes)
 462. [Thillen et al. — "CodeTaste: Can LLMs Generate Human-Level Code Refactorings?" (2026)](https://arxiv.org/abs/2603.04177) — Benchmark mined from real multi-file OSS refactorings, scored via repo tests plus static/dataflow checks for desired-pattern introduction and anti-pattern removal. Finds strong performance when refactorings are specified, but notable gap in discovering human-chosen refactorings from only focus-area prompts. Propose-then-implement decomposition improves alignment. Reinforces Rules 18 (Guard Long-Term Quality — maintainability/refactoring quality), 3 (Verify Work — behavior-preserving + structural checks), 4 (Small Steps — proposal phase before implementation)
+463. [Liu et al. — "Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training" (2026)](https://arxiv.org/abs/2603.12246) — Controlled study compares reasoning vs non-reasoning judges during RL post-training in non-verifiable domains. Finds non-reasoning judges reward-hack quickly; reasoning judges improve gold-judge scores but can induce strong adversarial policy behaviors that also fool popular benchmarks, exposing evaluator fragility. Reinforces Rules 3 (Verify Work — static evals are insufficient without training-loop validation), 20 (Treat Failures as System Signals — reward hacking reveals harness weaknesses), 22 (Calibrate Review Depth — strong benchmark scores can hide high-impact failure modes)
+464. [Zou et al. — "On Information Self-Locking in Reinforcement Learning for Active Reasoning of LLM agents" (2026)](https://arxiv.org/abs/2603.12109) — Identifies information self-locking where outcome-only RL traps agents in low-information interaction patterns via coupled failures in action selection and belief tracking. Proposes AReW (directional-critique advantage reweighting), showing broad gains across 7 datasets and multiple RL algorithms (up to 60% improvements). Reinforces Rules 20 (Treat Failures as System Signals — diagnose structural training pathologies), 15 (Iterate — stepwise critique-guided improvement), 14 (Design Environments — decomposed proxies/harnesses for AS vs BT dynamics)
+465. [Lam et al. — "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework" (2026)](https://arxiv.org/abs/2603.11768) — Surveys adaptive agent memory failure modes (drift, poisoning, leakage, obsolescence) and proposes SSGM with governed read/write gates, consistency validation, temporal decay, access control, and reconciliation against immutable logs. Formalizes bounded drift under periodic reconciliation and outlines testable evaluation protocols. Reinforces Rules 5 (Manage Context — memory lifecycle governance), 21 (Security-Conscious Use — provenance, ACLs, poisoning defenses), 14 (Design Environments — governed memory middleware and benchmarkable safety constraints)
 
 </details>
 
