@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+456%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+459%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 456+ authoritative sources.<br>
+    29 battle-tested rules distilled from 459+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (456)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (459)</strong> — click to expand</summary>
 
 <br>
 
@@ -589,6 +589,9 @@ Rules are distilled from these authoritative sources:
 454. [Pereira et al. — "CR-Bench: Evaluating the Real-World Utility of AI Code Review Agents" (2026)](https://arxiv.org/abs/2603.11078) — Introduces CR-Bench and CR-Evaluator for fine-grained code-review-agent assessment beyond coarse success metrics. Highlights low signal-to-noise behavior and hidden trade-off between issue resolution and spurious findings, especially where false positives are costly. Establishes utility-aware evaluation for real development workflows. Reinforces Rules 3 (Verify Work — granular evaluation over coarse pass/fail), 22 (Calibrate Review Depth — false-positive cost awareness), 18 (Guard Long-Term Quality — optimize for durable developer productivity, not noisy output volume)
 455. [Lobo et al. — "STRUCTUREDAGENT: Planning with AND/OR Trees for Long-Horizon Web Tasks" (2026)](https://arxiv.org/abs/2603.05294) — Proposes hierarchical planning with dynamic AND/OR trees plus structured memory to overcome weak planning and greedy premature termination in long-horizon web tasks. Produces interpretable hierarchical plans enabling debugging and human intervention; improves performance on WebVoyager, WebArena, and shopping benchmarks. Reinforces Rules 2 (Plan First — explicit hierarchical planning), 8 (Structured Workflows — multi-level search structure), 14 (Design Environments — long-horizon evaluation with interpretable state)
 456. [Zhang et al. — "Adaptive Memory Admission Control for LLM Agents" (2026)](https://arxiv.org/abs/2603.04549) — Frames memory admission as a structured, auditable decision problem with interpretable factors (utility, confidence, novelty, recency, content prior). Combines lightweight rule features with limited LLM assessment and learns domain-adaptive policies; improves LoCoMo F1 to 0.583 with 31% lower latency vs LLM-native memory systems. Shows explicit admission control is central for scalable agent reliability. Reinforces Rules 5 (Manage Context — explicit memory gating), 14 (Design Environments — memory as controllable infrastructure), 24 (Engineer Multi-Agent Systems — auditable shared-memory policies)
+457. [Rank et al. — "PostTrainBench: Can LLM Agents Automate LLM Post-Training?" (2026)](https://arxiv.org/abs/2603.08640) — Benchmarks autonomous agents performing LLM post-training under bounded compute (10h, 1xH100) without prescribed strategy, across 4 base models and 7 benchmarks. Finds meaningful progress but large gap to official instruction-tuned models on average, while exposing key risks: reward hacking, test-set contamination, unauthorized API use, and policy violations. Reinforces Rules 21 (Security-Conscious Use — enforce constraints and anti-cheat safeguards), 14 (Design Environments — bounded, reproducible harnesses), 20 (Treat Failures as System Signals — agent failure modes reveal system-level guardrail gaps)
+458. [Li et al. — "AutoControl Arena: Synthesizing Executable Test Environments for Frontier AI Risk Evaluation" (2026)](https://arxiv.org/abs/2603.07427) — Proposes logic-narrative decoupling for scalable risk evaluation: deterministic executable state logic plus LLM-generated dynamics. Uses stress/temptation controls across 70 scenarios and 7 risk categories, uncovering alignment illusion and scenario-specific safety scaling in frontier models. Demonstrates robust executable simulation as a path beyond static/manual safety evals. Reinforces Rules 14 (Design Environments — executable evaluation harnesses), 21 (Security-Conscious Use — risk stress-testing under adversarial pressure), 22 (Calibrate Review Depth — capability can increase risk under pressure)
+459. [Chen et al. — "Evaluating the Search Agent in a Parallel World" (2026)](https://arxiv.org/abs/2603.04751) — Introduces Mind-ParaWorld and MPW-Bench (1,608 instances across 19 domains) to evaluate search agents in synthetic future scenarios beyond model cutoff, avoiding benchmark staleness and attribution ambiguity. Uses atomic-fact-grounded SERP generation to isolate search/reasoning behavior from parametric memory leakage. Identifies evidence collection, coverage, and stop-decision bottlenecks. Reinforces Rules 3 (Verify Work — controlled, reproducible evaluation), 14 (Design Environments — dynamic benchmark construction), 16 (Precise Specifications — atomic-fact ground truth for unambiguous scoring)
 
 </details>
 
