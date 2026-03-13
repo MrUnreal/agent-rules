@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+465%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+468%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 465+ authoritative sources.<br>
+    29 battle-tested rules distilled from 468+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (465)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (468)</strong> — click to expand</summary>
 
 <br>
 
@@ -598,6 +598,9 @@ Rules are distilled from these authoritative sources:
 463. [Liu et al. — "Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training" (2026)](https://arxiv.org/abs/2603.12246) — Controlled study compares reasoning vs non-reasoning judges during RL post-training in non-verifiable domains. Finds non-reasoning judges reward-hack quickly; reasoning judges improve gold-judge scores but can induce strong adversarial policy behaviors that also fool popular benchmarks, exposing evaluator fragility. Reinforces Rules 3 (Verify Work — static evals are insufficient without training-loop validation), 20 (Treat Failures as System Signals — reward hacking reveals harness weaknesses), 22 (Calibrate Review Depth — strong benchmark scores can hide high-impact failure modes)
 464. [Zou et al. — "On Information Self-Locking in Reinforcement Learning for Active Reasoning of LLM agents" (2026)](https://arxiv.org/abs/2603.12109) — Identifies information self-locking where outcome-only RL traps agents in low-information interaction patterns via coupled failures in action selection and belief tracking. Proposes AReW (directional-critique advantage reweighting), showing broad gains across 7 datasets and multiple RL algorithms (up to 60% improvements). Reinforces Rules 20 (Treat Failures as System Signals — diagnose structural training pathologies), 15 (Iterate — stepwise critique-guided improvement), 14 (Design Environments — decomposed proxies/harnesses for AS vs BT dynamics)
 465. [Lam et al. — "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework" (2026)](https://arxiv.org/abs/2603.11768) — Surveys adaptive agent memory failure modes (drift, poisoning, leakage, obsolescence) and proposes SSGM with governed read/write gates, consistency validation, temporal decay, access control, and reconciliation against immutable logs. Formalizes bounded drift under periodic reconciliation and outlines testable evaluation protocols. Reinforces Rules 5 (Manage Context — memory lifecycle governance), 21 (Security-Conscious Use — provenance, ACLs, poisoning defenses), 14 (Design Environments — governed memory middleware and benchmarkable safety constraints)
+466. [Sun et al. — "LabShield: A Multimodal Benchmark for Safety-Critical Reasoning and Planning in Scientific Laboratories" (2026)](https://arxiv.org/abs/2603.11987) — Introduces a safety-centric benchmark for embodied laboratory agents with 164 tasks, multi-view data, and dual-track evaluation (MCQ + semi-open QA). Finds large drops from general MCQ skill to real lab safety performance and systematic hazard-underestimation in high-risk scenarios. Reinforces Rules 14 (Design Environments — realistic, safety-critical evaluation harnesses), 3 (Verify Work — multi-metric validation beyond single accuracy), 21 (Security-Conscious Use — explicit high-risk refusal/stop protocols)
+467. [Zhang et al. — "Verified Multi-Agent Orchestration: A Plan-Execute-Verify-Replan Framework for Complex Query Resolution" (2026)](https://arxiv.org/abs/2603.11445) — Defines VMAO, a DAG-based orchestration loop with dependency-aware parallel execution, verification-driven replanning, and configurable stop conditions. On expert-curated research queries, improves completeness and source quality over single-agent and static pipelines, with explicit quality-cost controls. Reinforces Rules 8 (Structured Workflows — explicit plan/execute/verify/replan loop), 24 (Engineer Multi-Agent Systems — DAG coordination with verifier feedback), 22 (Calibrate Review Depth — configurable stop criteria and quality-cost tradeoffs)
+468. [Prakash — "From Debate to Deliberation: Structured Collective Reasoning with Typed Epistemic Acts" (2026)](https://arxiv.org/abs/2603.11781) — Proposes DCI with typed interaction acts, phased deliberation, tension tracking, and a convergent closure algorithm that always emits a structured decision packet (including minority report and reopen conditions). Shows gains on non-routine, perspective-integration tasks but strong token overhead and routine-task regressions. Reinforces Rules 24 (Engineer Multi-Agent Systems — typed schemas and bounded convergence), 22 (Calibrate Review Depth — task-dependent payoff and cost tradeoffs), 18 (Guard Long-Term Quality — preserve dissent and rationale as durable process artifacts)
 
 </details>
 
