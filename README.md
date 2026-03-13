@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+450%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+453%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 450+ authoritative sources.<br>
+    29 battle-tested rules distilled from 453+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (450)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (453)</strong> — click to expand</summary>
 
 <br>
 
@@ -583,6 +583,9 @@ Rules are distilled from these authoritative sources:
 448. [Lovelace et al. — "Stop-Think-AutoRegress: Language Modeling with Latent Diffusion Planning" (COLM 2025)](https://arxiv.org/abs/2602.20528) — Introduces STAR-LDM, adding a "thinking" phase via latent diffusion planning before autoregressive token commitment. Enables global semantic planning and better coherence than token-only generation, with >70% win rates in LLM-as-judge comparisons for narrative coherence and commonsense reasoning. Supports lightweight control without retraining. Reinforces Rules 2 (Plan First — explicit planning phase before execution), 8 (Structured Workflows — stop-think-generate pipeline), 15 (Iterate — refine semantic plan before committing tokens)
 449. [Zhang et al. — "Response-Based Knowledge Distillation for Multilingual Jailbreak Prevention Unwittingly Compromises Safety" (NeurIPS 2025 SRTFM Workshop)](https://arxiv.org/abs/2602.11157) — Distills refusal behaviors from a proprietary teacher into open models using multilingual jailbreak prompts. Finds counterintuitive degradation: standard "safe refusal" distillation can increase jailbreak success rate by up to 16.6 points across students. Boundary-refusal filtering mitigates some harm but can still trade off reasoning quality. Reinforces Rules 21 (Security-Conscious Use — safety tuning can backfire cross-lingually), 20 (Treat Failures as System Signals — benchmark regressions reveal hidden alignment failures), 3 (Verify Work — multilingual safety requires robust evaluation, not assumptions)
 450. [Lin et al. — "Evaluation and Benchmarking Suite for Financial Large Language Models and Agents" (SecureFinAI Lab, 2026)](https://arxiv.org/abs/2602.19073) — Presents lifecycle-oriented FinLLM/FinAgent evaluation and governance stack spanning exploration, readiness, and governance phases, including leaderboarding, ops framework, and open documentation ecosystem. Highlights that general LLMs often lack domain-specific financial reasoning reliability and need dedicated evaluation + governance mechanisms. Reinforces Rules 22 (Calibrate Review Depth — domain risk requires deeper review), 14 (Design Environments — benchmark/governance harnesses are first-class infra), 23 (Write for Autonomous Agents — domain-specific task specs and evaluation criteria)
+451. [Shah et al. — "The Unlearning Mirage: A Dynamic Framework for Evaluating LLM Unlearning" (COLM 2025)](https://arxiv.org/abs/2603.11266) — Proposes dynamic, structured probing to stress-test unlearning robustness against query variations (multi-hop and aliasing) that recover supposedly forgotten facts. Shows static benchmarks overestimate success and miss failures; activation analysis explains brittleness via alternative pathways in multi-hop queries. Includes practical tooling/pip package for scalable real-world evaluation. Reinforces Rules 20 (Treat Failures as System Signals — static evals can hide failures), 3 (Verify Work — dynamic adversarial evaluation required), 21 (Security-Conscious Use — forgetting/safety claims need robust stress-testing)
+452. [Li et al. — "AI Psychometrics: Evaluating the Psychological Reasoning of Large Language Models with Psychometric Validities" (HICSS 2025)](https://arxiv.org/abs/2603.11279) — Applies psychometric validity analysis (convergent, discriminant, predictive, external) to compare psychological reasoning behavior across GPT-3.5/4 and LLaMA-2/3 under TAM-style constructs. Finds higher-capability models show stronger psychometric validity, supporting standardized behavioral evaluation frameworks for opaque models. Reinforces Rules 22 (Calibrate Review Depth — risk-aware behavioral evaluation), 3 (Verify Work — validity-based evaluation beyond accuracy), 18 (Guard Long-Term Quality — measurable evaluation quality over time)
+453. [Leelawat et al. — "Watson & Holmes: A Naturalistic Benchmark for Comparing Human and LLM Reasoning" (2026)](https://arxiv.org/abs/2602.19914) — Introduces a naturalistic detective-style benchmark with incremental narrative evidence, open-ended responses, and validated automated grading against human assessors. Tracks rapid model improvements through 2025 and highlights remaining weaknesses (especially longer-case reasoning). Provides human-comparable reasoning signals beyond synthetic QA tasks. Reinforces Rules 3 (Verify Work — benchmark with validated grading), 14 (Design Environments — realistic, incremental evidence tasks), 22 (Calibrate Review Depth — compare against human baselines for risk-sensitive confidence)
 
 </details>
 
