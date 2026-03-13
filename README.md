@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+441%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+444%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 441+ authoritative sources.<br>
+    29 battle-tested rules distilled from 444+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (441)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (444)</strong> — click to expand</summary>
 
 <br>
 
@@ -574,6 +574,9 @@ Rules are distilled from these authoritative sources:
 439. [Xiao et al. — "Efficient Streaming Language Models with Attention Sinks" (MIT-Han Lab, 2023)](https://arxiv.org/abs/2309.17453) — ICLR 2024: StreamingLLM enables models trained on finite-length windows to generalize to infinite sequence lengths without finetuning. Attention sink phenomenon: keeping KV of initial tokens recovers performance. KV-cache efficiency for streaming (4M+ tokens). 22.2x speedup vs. sliding window baseline. Validates on Llama-2, MPT, Falcon, Pythia. Demonstrates placeholder token as dedicated sink during pre-training. Code and datasets released. Authors: Xiao, Tian, Chen, Han, Lewis. Reinforces Rules 5 (Manage Context — efficient memory via attention sinks), 14 (Agent Environments — streaming-optimized architectures), 26 (Sustain Pace — efficiency multipliers)
 440. [Minaee et al. — "Large Language Models: A Survey" (Google/Meta/Facebook, 2024)](https://arxiv.org/abs/2402.06196) — Updated March 2025. Comprehensive survey covering GPT, LLaMA, PaLM families. Reviews techniques for building LLMs (architecture, pretraining, finetuning), augmentation methods (RAG, prompting), popular datasets, evaluation metrics, benchmark performance. Discusses scaling laws, limitations, and open challenges. Authoritative reference for LLM landscape. Authors: Minaee, Mikolov, Nikzad, Chenaghlu, Socher, Amatriain, Gao. Reinforces Rules 1 (Explore First — canonical LLM foundations), 7 (Quality Code — established architectural patterns), 16 (Precise Specifications — benchmark-driven evaluation standards)
 441. [Schick et al. — "Toolformer: Language Models Can Teach Themselves to Use Tools" (Meta, 2023)](https://arxiv.org/abs/2302.04761) — Self-supervised learning of tool use: model learns which APIs to call, when, with what arguments, how to embed results. Demonstrates: calculator (arithmetic), search engines (info retrieval), Q&A system (factual knowledge), translator (language pivot), calendar (temporal reasoning). Zero-shot improvements without sacrificing base LM ability (core language modeling preserved). Minimal supervision: handful of demos per API. Cost-effective augmentation. Authors: Schick, Dwivedi-Yu, Dessì, Raileanu, Lomeli, Zettlemoyer, Cancedda, Scialom. Reinforces Rules 9 (Delegate — tool integration design patterns), 16 (Precise Specifications — API contracts + arguments), 25 (Craft ACIs — tool ACI design principles)
+442. [DeepSeek-AI et al. — "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" (DeepSeek, 2025)](https://arxiv.org/abs/2501.12948) — Shows reasoning can emerge from pure RL without human-labeled reasoning traces. Emergent behaviors include self-reflection, verification, and dynamic strategy adaptation. Strong gains on verifiable math/coding/STEM tasks; reported Nature 2025 publication with a revised 2026 arXiv version. Demonstrates scaling via distilled smaller models from reasoning-rich traces. Reinforces Rules 15 (Iterate — self-reflection and adaptive retry loops), 3 (Verify Work — explicit verification behaviors), 11 (Red/Green TDD — verifiable-reward training signal)
+443. [Muennighoff et al. — "s1: Simple test-time scaling" (Stanford/AI2, 2025)](https://arxiv.org/abs/2501.19393) — Introduces lightweight test-time scaling via budget forcing (terminate/extend reasoning budget) and a compact high-quality reasoning set (s1K). Demonstrates strong reasoning gains from controlled inference-time compute, including improvements on AIME24 and MATH with open models. Open-sources model, data, and code. Reinforces Rules 26 (Sustain Pace — test-time compute budget management), 2 (Plan First — explicit compute/time budgeting per task), 15 (Iterate — forcing additional deliberation to recover from early wrong paths)
+444. [Zhang et al. — "SoK: DARPA's AI Cyber Challenge (AIxCC): Competition Design, Architectures, and Lessons Learned" (DARPA/AIxCC Teams, 2026)](https://arxiv.org/abs/2602.07666) — Systematic analysis of the largest autonomous cyber reasoning competition (2023-2025), where LLM-based systems discover and remediate vulnerabilities in real OSS. Examines competition design, CRS architectures, execution traces, and performance drivers beyond leaderboard outcomes, surfacing practical limitations and deployment lessons. Reinforces Rules 21 (Security-Conscious Use — autonomous security work needs strict controls), 14 (Design Environments — benchmark and harness design shape outcomes), 20 (Treat Failures as System Signals — postmortems reveal harness and architecture gaps)
 
 </details>
 
