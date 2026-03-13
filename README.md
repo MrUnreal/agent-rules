@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+453%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Universal+Coding+Agent+Rules+%F0%9F%A4%96;One+File.+Every+Agent.+Better+Code.;Copilot+%C2%B7+Claude+Code+%C2%B7+Cursor+%C2%B7+Codex;29+Rules+%7C+456%2B+Sources;Drop+AGENTS.md+%E2%86%92+Ship+Better+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
     <strong>One rules file for every coding agent.</strong><br>
-    29 battle-tested rules distilled from 453+ authoritative sources.<br>
+    29 battle-tested rules distilled from 456+ authoritative sources.<br>
     Drop <code>AGENTS.md</code> into any project — every major agent picks it up automatically.
 </p>
 
@@ -127,7 +127,7 @@ Rules evolve through the research → iterate → write → research cycle (Rule
 ---
 
 <details>
-<summary><strong>📚 Sources (453)</strong> — click to expand</summary>
+<summary><strong>📚 Sources (456)</strong> — click to expand</summary>
 
 <br>
 
@@ -586,6 +586,9 @@ Rules are distilled from these authoritative sources:
 451. [Shah et al. — "The Unlearning Mirage: A Dynamic Framework for Evaluating LLM Unlearning" (COLM 2025)](https://arxiv.org/abs/2603.11266) — Proposes dynamic, structured probing to stress-test unlearning robustness against query variations (multi-hop and aliasing) that recover supposedly forgotten facts. Shows static benchmarks overestimate success and miss failures; activation analysis explains brittleness via alternative pathways in multi-hop queries. Includes practical tooling/pip package for scalable real-world evaluation. Reinforces Rules 20 (Treat Failures as System Signals — static evals can hide failures), 3 (Verify Work — dynamic adversarial evaluation required), 21 (Security-Conscious Use — forgetting/safety claims need robust stress-testing)
 452. [Li et al. — "AI Psychometrics: Evaluating the Psychological Reasoning of Large Language Models with Psychometric Validities" (HICSS 2025)](https://arxiv.org/abs/2603.11279) — Applies psychometric validity analysis (convergent, discriminant, predictive, external) to compare psychological reasoning behavior across GPT-3.5/4 and LLaMA-2/3 under TAM-style constructs. Finds higher-capability models show stronger psychometric validity, supporting standardized behavioral evaluation frameworks for opaque models. Reinforces Rules 22 (Calibrate Review Depth — risk-aware behavioral evaluation), 3 (Verify Work — validity-based evaluation beyond accuracy), 18 (Guard Long-Term Quality — measurable evaluation quality over time)
 453. [Leelawat et al. — "Watson & Holmes: A Naturalistic Benchmark for Comparing Human and LLM Reasoning" (2026)](https://arxiv.org/abs/2602.19914) — Introduces a naturalistic detective-style benchmark with incremental narrative evidence, open-ended responses, and validated automated grading against human assessors. Tracks rapid model improvements through 2025 and highlights remaining weaknesses (especially longer-case reasoning). Provides human-comparable reasoning signals beyond synthetic QA tasks. Reinforces Rules 3 (Verify Work — benchmark with validated grading), 14 (Design Environments — realistic, incremental evidence tasks), 22 (Calibrate Review Depth — compare against human baselines for risk-sensitive confidence)
+454. [Pereira et al. — "CR-Bench: Evaluating the Real-World Utility of AI Code Review Agents" (2026)](https://arxiv.org/abs/2603.11078) — Introduces CR-Bench and CR-Evaluator for fine-grained code-review-agent assessment beyond coarse success metrics. Highlights low signal-to-noise behavior and hidden trade-off between issue resolution and spurious findings, especially where false positives are costly. Establishes utility-aware evaluation for real development workflows. Reinforces Rules 3 (Verify Work — granular evaluation over coarse pass/fail), 22 (Calibrate Review Depth — false-positive cost awareness), 18 (Guard Long-Term Quality — optimize for durable developer productivity, not noisy output volume)
+455. [Lobo et al. — "STRUCTUREDAGENT: Planning with AND/OR Trees for Long-Horizon Web Tasks" (2026)](https://arxiv.org/abs/2603.05294) — Proposes hierarchical planning with dynamic AND/OR trees plus structured memory to overcome weak planning and greedy premature termination in long-horizon web tasks. Produces interpretable hierarchical plans enabling debugging and human intervention; improves performance on WebVoyager, WebArena, and shopping benchmarks. Reinforces Rules 2 (Plan First — explicit hierarchical planning), 8 (Structured Workflows — multi-level search structure), 14 (Design Environments — long-horizon evaluation with interpretable state)
+456. [Zhang et al. — "Adaptive Memory Admission Control for LLM Agents" (2026)](https://arxiv.org/abs/2603.04549) — Frames memory admission as a structured, auditable decision problem with interpretable factors (utility, confidence, novelty, recency, content prior). Combines lightweight rule features with limited LLM assessment and learns domain-adaptive policies; improves LoCoMo F1 to 0.583 with 31% lower latency vs LLM-native memory systems. Shows explicit admission control is central for scalable agent reliability. Reinforces Rules 5 (Manage Context — explicit memory gating), 14 (Design Environments — memory as controllable infrastructure), 24 (Engineer Multi-Agent Systems — auditable shared-memory policies)
 
 </details>
 
